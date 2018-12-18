@@ -1,0 +1,18 @@
+$member-width: 220px;
+
+.team-members {
+
+}
+
+.team-member {
+  display: block;
+  width: $member-width;
+  margin: 0 auto;
+
+  .image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $member-width;
+    height: $member-width;
+  }
+}

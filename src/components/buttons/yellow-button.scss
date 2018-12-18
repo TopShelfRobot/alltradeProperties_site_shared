@@ -1,0 +1,11 @@
+@import 'variables';
+
+.yellow-button {
+  background-color: $yellow;
+  border: 2px solid $blue;
+  font-size: 16px;
+  font-weight: bold !important;
+  white-space: normal !important;
+  padding: 8px 30px !important;
+  color: $black !important;
+}

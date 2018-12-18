@@ -1,0 +1,19 @@
+.header-title {
+  background-color: rgba(133, 133, 133, 0.2);
+  line-height: 30px;
+
+  .secondary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+  }
+  h1 {
+    font-size: 30px;
+    color: rgba(37, 36, 40, 1);
+    line-height: 72px;
+  }
+
+  h2 {
+    line-height: 72px;
+  }
+}

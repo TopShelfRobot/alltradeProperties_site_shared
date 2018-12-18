@@ -1,0 +1,45 @@
+@import 'variables';
+
+
+.pager {
+  margin-top: 2em;
+
+  li.disabled,
+  li.active, 
+  li {
+
+    margin-left: 1em;
+
+    button {
+      background-color: $black !important;
+      font-size: 12px;
+      height: 2em;
+      min-width: 2em;
+      line-height: 2em;
+      border-radius: 3px;
+      padding:0 3px;
+      text-align: center;
+
+      &, &:hover, &.visited {
+        color: #fff !important;
+      }
+      &:hover {
+        background-color: #838383 !important;
+      }
+    }
+
+
+  }
+
+  li:first-child {
+    margin-left: 0;
+  }
+  
+  li.active {
+    a {
+      background-color: #838383 !important;
+      color: $yellow !important;
+      border: none;
+    }
+  }
+}

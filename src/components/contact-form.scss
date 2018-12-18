@@ -1,0 +1,13 @@
+@import 'variables';
+
+.contact-form {
+
+  .input-group {
+    margin-bottom: 30px;
+  }
+
+  .input-error {
+    position: absolute;
+    color: $red;
+  }
+}

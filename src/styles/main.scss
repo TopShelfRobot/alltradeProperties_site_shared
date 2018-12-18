@@ -1,0 +1,64 @@
+@import 'config';
+@import 'components';
+@import 'ribbons';
+@import url('lato/stylesheet.css');
+@import url('websymbols/stylesheet.css');
+@import url(entypo/stylesheet.css);
+@import 'card';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+}
+
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.form-title {
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 1em;
+}
+
+.remove-bottom {
+  margin-bottom: 0;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  list-style: none outside;
+}
+
+.square {
+  padding-bottom: 100%;
+}

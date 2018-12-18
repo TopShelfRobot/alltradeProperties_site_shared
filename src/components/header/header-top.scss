@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'config';
+
+.header-top {
+  background-color: $black;
+  color: $yellow;
+  border-bottom: 5px solid $blue;
+  padding: 10px 0;
+
+  .left-box {
+    flex-grow: 1;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  }
+
+  .right-box {
+    flex-grow: 1;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      flex-grow: 0;
+      text-align: right;
+    }
+  }
+}

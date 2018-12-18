@@ -1,0 +1,22 @@
+@import 'variables';
+
+.header-nav {
+  background-color: $yellow;
+  color: black;
+
+  .header-nav-row {
+    position: relative;
+  }
+
+  .brand {
+    height: 70px;
+    margin: 0;
+    flex-grow: 0;
+  }
+
+  .header-nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+}

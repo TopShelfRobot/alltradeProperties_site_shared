@@ -1,0 +1,26 @@
+@import 'variables';
+
+.cta-button {
+  display: inline-block;
+  cursor: pointer;
+
+  font-size: 18px;
+  line-height: 1.3333;
+  border-radius: 6px;
+
+  background-color: $red;
+  border: 2px solid darken($red, 10%);
+  white-space: normal;
+  font-weight: bold;
+  padding: 8px 30px;
+  color: white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: lighten($red, 10%);
+  }
+
+  &, &:hover, &:visited {
+    color: white !important;
+  }
+}

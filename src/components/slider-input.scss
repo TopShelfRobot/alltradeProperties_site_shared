@@ -1,0 +1,51 @@
+@import 'variables';
+
+.slider-input {
+  position: relative;
+
+  input.with-icon {
+    padding-left: 35px;
+  }
+
+  .rc-slider {
+    position: absolute;
+    padding: 0;
+    width: 50%;
+    top: 12px;
+    right: 30px;
+    height: 10px;
+  }
+  .rc-slider-rail {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    background-color: #ccc;
+    height: 4px;
+    border-radius: 6px;
+  }
+
+  .rc-slider-track {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #ccc;
+    border: 1px solid #bbb;
+  }
+
+  .rc-slider-handle {
+    position: absolute;
+    margin-left: -7px;
+    margin-top: -5px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+    border-radius: 2px;
+    border: 1px solid #d3d3d3;
+    background-color: $yellow;
+    -ms-touch-action: pan-x;
+        touch-action: pan-x;
+  }
+}

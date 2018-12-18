@@ -1,0 +1,19 @@
+.search-form-listing {
+  margin-top: 20px;
+
+  form {
+    padding-top: 20px;
+  }
+
+  .search-checkboxes input[type="checkbox"] {
+    opacity: 1 !important;
+    float: none !important;
+    width: 15%;
+  }
+  
+  .search-checkboxes label {
+    vertical-align: top;
+    width: 80%;
+    font-weight: bold;
+  }
+}

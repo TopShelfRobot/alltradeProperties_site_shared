@@ -1,0 +1,41 @@
+.resident-selection {
+  padding: 15px;
+  font-size: 18px;
+  
+  ol {
+    list-style: decimal;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  li {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.resident-selection h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.25em;
+}
+
+.resident-selection h2 {
+  font-size: 1.1em;
+}
+
+.resident-selection h3 {
+  font-size: 1em;
+  text-decoration: underline;
+  margin-top: 1.5em;
+  font-weight: bold;
+}
+
+.resident-selection ol li {
+  margin: 0;
+}
+
+.nav-link {
+  cursor: pointer;
+}

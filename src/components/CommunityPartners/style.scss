@@ -1,0 +1,35 @@
+
+.community-partner {
+  .card-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 90%;
+    }
+  }
+
+  .partner-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .partner-info div:last-child {
+    flex-grow: 1;
+    vertical-align: bottom;
+  }
+  .partner-url {
+    display:flex;
+    align-items: flex-end;
+  }
+  .partner-url a {
+    color: #9ad0ff;
+    font-weight: bold;
+  }
+}

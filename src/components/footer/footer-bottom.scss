@@ -1,0 +1,61 @@
+@import 'variables';
+
+.footer-bottom {
+  border-bottom: 1px solid #222225;
+  border-top: 1px solid #222225;
+  padding: 38px 0;
+  background: #2d2c31;
+  color: #ddd;
+  font-size: 11px;
+
+  a, a:visited {
+    color: #ddd;
+  }
+  
+  .menu {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none outside;
+  }
+  
+  .menu li {
+    padding: 0 9px;
+    display: inline-block;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+
+  .menu li + li {
+    border-left: 1px solid #454545;
+  }
+  
+  .menu li a {
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+    color: #ddd;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .copyright {
+    text-align: right;
+  }
+
+  ul.social {
+    font-family: "WebSymbolsRegular";
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none outside;
+  }
+
+  ul.social li {
+    display: inline-block;
+    margin: 0 4px;
+
+    
+  }
+}
+

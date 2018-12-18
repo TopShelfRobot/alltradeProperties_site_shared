@@ -1,0 +1,40 @@
+@import 'variables';
+
+.callout-box {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  margin: 0 0 29px;
+  padding: 27px 10px 29px;
+  text-align: center;
+
+  .callout-content {
+    display: inline-block;
+  }
+
+  .callout-icon {
+    color: $yellow;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 12px 0 0 0;
+    font-size: 50px;
+    line-height: 60px;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  .callout-text {
+    line-height: 1;
+    margin: 0 18px 0 0;
+    text-align: left;
+    float: left;
+
+    .stat {
+      display: block;
+      color: $yellow;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.office-main, .office-branch {
+  h5.title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .office-address, .office-hours {
+    padding: 0;
+  }
+}

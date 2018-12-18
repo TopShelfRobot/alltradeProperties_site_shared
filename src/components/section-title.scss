@@ -1,0 +1,11 @@
+@import 'variables';
+
+.section-title {
+  width: 100%;
+  background-color: $yellow;
+  font-size: 30px;
+  padding: 0.5em;
+  margin: 1em 0;
+  text-transform: uppercase;
+  text-shadow: 0px 1px #fff;
+}
