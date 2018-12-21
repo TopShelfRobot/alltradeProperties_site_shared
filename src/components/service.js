@@ -16,7 +16,7 @@ const positions = {
 
 const Service = props => (
   <div className="service-offering">
-    <h2>
+    <div>
       <a
         href={props.href}
         className="service-icon"
@@ -24,9 +24,13 @@ const Service = props => (
       >
         &nbsp;
       </a>
-      {props.title}
-    </h2>
-    <p>{props.content}</p>
+    </div>
+
+    <div>
+      <h2>{props.title}</h2>
+
+      <p>{props.content}</p>
+    </div>
   </div>
 )
 

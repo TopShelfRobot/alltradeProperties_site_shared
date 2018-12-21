@@ -3,7 +3,7 @@ const path = require('path')
 // prettier-ignore
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Alltrade Properties',
     phone: '(502) 562-1985',
     email: 'info@alltradeproperties.com',
     menu: [
