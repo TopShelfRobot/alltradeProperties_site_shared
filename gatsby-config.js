@@ -3,7 +3,7 @@ const path = require('path')
 // prettier-ignore
 module.exports = {
   siteMetadata: {
-    title: 'Alltrade Properties',
+    title: 'Alltrade Property Management',
     phone: '(502) 562-1985',
     email: 'info@alltradeproperties.com',
     menu: [
@@ -20,7 +20,7 @@ module.exports = {
           label: "Listings",
           url: '/listing',
           sub: [
-            {label: "Residential Selection Guidelines", url: "/resident-selection"},
+            {label: "Resident Selection Guidelines", url: "/resident-selection"},
           ]
         },
         { label: 'Offices', url: '/offices'},
