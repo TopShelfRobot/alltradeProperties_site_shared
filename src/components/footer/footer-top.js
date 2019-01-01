@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Container from '../container'
+import MainAddress from '../main-address'
 import Row from '../row'
 import ehoLogo from '../../images/eho_logo.png'
 
@@ -42,19 +43,7 @@ const FooterTop = props => (
                     <img className="eho" src={ehoLogo} alt="Equal Housing Opportunity Logo" />
                   </div>
                   <div className="col-sm-8">
-                    <ul className="address">
-                      <li className="location">710 Barret Ave, Louisville, KY</li>
-                      <li className="phone">
-                        <a className="phone" href="tel:(502)562-1985">
-                          (502)562-1985
-                        </a>
-                      </li>
-                      <li className="email">
-                        <a className="email" href="mailto:info@alltradeproperties.com">
-                          info@alltradeproperties.com
-                        </a>
-                      </li>
-                    </ul>
+                    <MainAddress />
                   </div>
                 </Row>
               </div>

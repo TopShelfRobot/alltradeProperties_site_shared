@@ -23,40 +23,6 @@
     max-width: 100%;
   }
 
-  .address {
-    a, a:visited {
-      color: inherit;
-    }
-
-    li {
-      line-height: 18px;
-    }
-    
-    li.location:before, li.phone:before, li.email:before {
-      font-family: "EntypoRegular";
-      font-size: 30px;
-      display: inline-block;
-      position: relative;
-      top: 2px;
-      margin-right: 0;
-      margin-left: -20px;
-      width: 20px;
-      text-align: center;
-      
-    }
-
-    li.location:before {
-      content: '0';
-    }
-    li.phone:before {
-      content: '!';
-    }
-    li.email:before {
-      content: '%';
-    }
-      
-
-  }
 
   .twitter-container {
     max-height: 380px;
