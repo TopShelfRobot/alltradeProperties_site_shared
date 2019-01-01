@@ -28,6 +28,7 @@ const Service = props => (
 
     <div>
       <h2>{props.title}</h2>
+      {props.subtitle && <h4>{props.subtitle}</h4>}
 
       <p>{props.content}</p>
     </div>

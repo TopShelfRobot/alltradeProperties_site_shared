@@ -4,8 +4,8 @@ import UnitImage from './unit-image'
 import './unit-listing.scss'
 
 const UnitListing = ({ unit, ...props }) => (
-  <article className="featured-unit unit-listing">
-    <UnitImage url={`/single-property/${unit.unitID}`} imgUrl={`url(${unit.imgUrl})`} />
+  <article className="unit-listing">
+    <UnitImage url={`/detail?UnitID=${unit.unitID}`} imgUrl={`url(${unit.imgUrl})`} />
     <div className="description">
       {!!unit.title && <h6>{unit.title}</h6>}
       <h6>{unit.fullAddress}</h6>
@@ -13,7 +13,7 @@ const UnitListing = ({ unit, ...props }) => (
     </div>
     <div className="tools">
       <p className="price">${unit.rent}</p>
-      <a href={`/single-property/${unit.unitID}`} className="button" target="_blank" rel="noopener noreferrer">
+      <a href={`/detail?UnitID=${unit.unitID}`} className="button" target="_blank" rel="noopener noreferrer">
         See more
       </a>
     </div>

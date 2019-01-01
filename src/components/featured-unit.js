@@ -16,7 +16,7 @@ const FeaturedUnit = ({ unit, ...props }) => (
       </div>
     )}
 
-    <UnitImage url={`/single-property/${unit.unitID}`} imgUrl={`url(${unit.imgUrl})`} />
+    <UnitImage url={`/detail?UnitID=${unit.unitID}`} imgUrl={`url(${unit.imgUrl})`} />
     <div className="description">
       <div className="fade-bottom" />
       <h6>{unit.address}</h6>
@@ -25,7 +25,7 @@ const FeaturedUnit = ({ unit, ...props }) => (
     </div>
     <div className="tools">
       <p className="price">${unit.rent}</p>
-      <a href={`/single-property/${unit.unitID}`} className="button">
+      <a href={`/detail?UnitID=${unit.unitID}`} className="button">
         See more
       </a>
     </div>

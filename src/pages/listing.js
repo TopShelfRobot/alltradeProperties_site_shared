@@ -7,7 +7,7 @@ import Container from '../components/container'
 import Row from '../components/row'
 import SearchFormListing from '../components/search-form-listing'
 import ListingGallery from '../components/listing-gallery'
-import { queryToQuerystring, querystringToQuery, queryToBody, getDefaultForm } from '../lib/query'
+import { queryToQuerystring, getQueryFromLocation, queryToBody, getDefaultForm } from '../lib/query'
 
 class ListingPage extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class ListingPage extends React.Component {
   }
 
   async componentDidMount() {
-    const query = { ...this.state.query, ...this.getQueryFromLocation() }
+    const query = { ...this.state.query, ...getQueryFromLocation() }
 
     const [{ types }, { neighborhoods }, { officeGroups }, { units }] = await Promise.all([
       api.getTypes(),
@@ -41,11 +41,6 @@ class ListingPage extends React.Component {
     const { page, pageSize } = this.state
     const body = queryToBody({ ...query, page, pageSize })
     return api.getUnits(body)
-  }
-
-  getQueryFromLocation = () => {
-    const qs = window.location.search
-    return querystringToQuery(qs)
   }
 
   handleQueryChange = (name, value) => {

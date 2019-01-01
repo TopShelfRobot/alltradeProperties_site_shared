@@ -12,7 +12,11 @@ const DEFAULT_FORM = {
   utilities: false,
   movein: false,
 }
-// const FORM_FIELDS = Object.keys(DEFAULT_FORM)
+
+export const getQueryFromLocation = () => {
+  const qs = window.location.search
+  return querystringToQuery(qs)
+}
 
 export const getDefaultForm = (...args) => {
   const argFormSets = args || []

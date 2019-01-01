@@ -7,6 +7,7 @@ module.exports = {
   getOfficeGroups: () => request.get('/prop/officeGroups'),
   getPropertyGroups: () => request.get('/prop/propertyGroups'),
   getUnits: query => request.post('/prop/units/search', query),
+  getUnit: unitID => request.get(`/prop/units/${unitID}`),
   getOffices: () => request.get('/prop/offices'),
 
   getEvictionResources: () => request.get('/eviction'),

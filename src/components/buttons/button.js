@@ -4,7 +4,7 @@ import './button.scss'
 
 const Button = ({ href, className: classNameProp, children, ...props }) => {
   return href ? (
-    <a className={classNameProp} href={props.href} {...props}>
+    <a className={classNameProp} href={href} {...props}>
       {children}
     </a>
   ) : (

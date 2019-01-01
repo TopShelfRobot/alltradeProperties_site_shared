@@ -1,0 +1,23 @@
+.unit-detail {
+  background-color: #fff;
+  padding-bottom: 40px;
+
+  img {
+    max-width: 100%;
+  }
+
+  .amenity {
+    border-bottom: solid 1px #E7E7E7;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+  }
+  .amenity-name {
+    color: #2D2C32;
+  }
+  .amenity-data{
+    flex: 1;
+    color: #858585;
+    text-align: right;
+  }
+}

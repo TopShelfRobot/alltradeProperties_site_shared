@@ -1,4 +1,5 @@
 import React from 'react'
+import cn from 'classnames'
 
 import Row from './row'
 import TitledPanel from './titled-panel'
@@ -78,15 +79,18 @@ class ContactForm extends React.Component {
     const {
       title = 'Contact Form',
       titleIcon = EmailIcon,
+      messagePlaceholder = '',
+      toEmail = '',
       currentAddress: showCurrentAddress,
       numberOfUnits: showNumberOfUnits,
       propertyType: showPropertyType,
+      className: classNameProp,
     } = this.props
 
     return (
-      <TitledPanel className="contact-form" title={title} titleIcon={titleIcon}>
+      <TitledPanel className={cn('contact-form', classNameProp)} title={title} titleIcon={titleIcon}>
         <form action="post" className="remove-bottom" id="mail-form" onSubmit={this.handleSubmit}>
-          <input type="hidden" id="mail-toEmail" value="" />
+          <input type="hidden" id="mail-toEmail" value={toEmail} />
 
           <Row>
             <div className="col-12 input-group">
@@ -173,10 +177,11 @@ class ContactForm extends React.Component {
                 onChange={this.handleChange}
                 rows="10"
                 className="form-control"
+                placeholder={messagePlaceholder || ''}
               />
               <Error error={formErrors.message} />
             </div>
-            <div className="col-12 input-group">
+            <div className="col-12 input-group mb-0">
               {error && <p className="text-danger">{error}</p>}
               {success && <p className="text-success">{success}</p>}
               <BlackButton onClick={this.handleSubmit}>Submit</BlackButton>

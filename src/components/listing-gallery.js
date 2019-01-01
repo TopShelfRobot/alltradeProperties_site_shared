@@ -36,7 +36,7 @@ export default class ListingGallery extends React.Component {
         </div>
         <Row>
           {units.map(unit => (
-            <div key={`listing-${unit.UnitID}`} className="col-4">
+            <div key={`listing-${unit.UnitID}`} className="col-4 mb-3">
               <UnitListing unit={unit} />
             </div>
           ))}
