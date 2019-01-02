@@ -10,14 +10,13 @@ export default class CareersPage extends React.Component {
     script.id = 'gnewtonjs'
     script.async = true
 
-    document.body.appendChild(script)
-    console.log('APPENDING', script)
+    document.getElementById('newton-container').appendChild(script)
   }
 
   render() {
     return (
       <Layout pageTitle="Careers">
-        <div />
+        <div id="newton-container" />
       </Layout>
     )
   }
