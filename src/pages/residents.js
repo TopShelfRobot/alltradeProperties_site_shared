@@ -10,6 +10,7 @@ import { YellowButton } from '../components/buttons'
 import ContactForm from '../components/contact-form'
 import SectionTitle from '../components/section-title'
 import Snippet from '../components/snippet'
+import EvictionResourcesTable from '../components/eviction-resources-table'
 
 const paddedSectionStyle = {
   margin: '30px 0',
@@ -134,28 +135,7 @@ class ResidentsPage extends React.Component {
               const resources = data.allEvictionResource.edges.map(edge => edge.node)
               return (
                 <div className="card">
-                  <table className="table eviction-resources">
-                    <thead>
-                      <tr>
-                        <th style={{ minWidth: 250 }}>Name</th>
-                        <th>Phone</th>
-                        <th style={{ width: '100%' }}>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {resources.map(resource => (
-                        <tr key={`resource-${resource.id}`}>
-                          <td>
-                            {resource.name}
-                            <br />
-                            {resource.url}
-                          </td>
-                          <td style={{ whiteSpace: 'nowrap' }}>{resource.phone}</td>
-                          <td>{resource.description}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                  <EvictionResourcesTable resources={resources} />
                 </div>
               )
             }}

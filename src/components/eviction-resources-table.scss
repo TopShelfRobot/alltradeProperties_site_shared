@@ -1,0 +1,21 @@
+@import 'variables';
+
+.eviction-resources-table {
+  .row {
+    margin: 0;
+  }
+  .row > div {
+    padding: 5px;
+  } 
+
+  .name {
+    font-weight: bold;
+  }
+  .website {
+    word-break: break-all;
+    color: $gray-500;
+  }
+  .phone {
+    white-space: nowrap;
+  }
+}
