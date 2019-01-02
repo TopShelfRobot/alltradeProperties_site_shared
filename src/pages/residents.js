@@ -137,20 +137,20 @@ class ResidentsPage extends React.Component {
                   <table className="table eviction-resources">
                     <thead>
                       <tr>
-                        <th>Name</th>
+                        <th style={{ minWidth: 250 }}>Name</th>
                         <th>Phone</th>
-                        <th>Website</th>
-                        <th>Description</th>
+                        <th style={{ width: '100%' }}>Description</th>
                       </tr>
                     </thead>
                     <tbody>
                       {resources.map(resource => (
-                        <tr key={resource.id}>
-                          <td>{resource.name}</td>
-                          <td style={{ whiteSpace: 'nowrap' }}>{resource.phone}</td>
+                        <tr key={`resource-${resource.id}`}>
                           <td>
-                            <a href={resource.url}>{resource.url}</a>
+                            {resource.name}
+                            <br />
+                            {resource.url}
                           </td>
+                          <td style={{ whiteSpace: 'nowrap' }}>{resource.phone}</td>
                           <td>{resource.description}</td>
                         </tr>
                       ))}
