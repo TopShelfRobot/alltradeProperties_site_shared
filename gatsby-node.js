@@ -13,13 +13,14 @@ const getContentDigest = content =>
 exports.sourceNodes = async ({ actions }) => {
   const { createNode } = actions
 
-  let resources, snippets, offices, teamMembers, partners
+  let resources, snippets, offices, teamMembers, partners, articles
   try {
     resources = await api.getEvictionResources()
     snippets = await api.getSnippets()
     offices = await api.getOffices()
     teamMembers = await api.getTeamMembers()
     partners = await api.getCommunityPartners()
+    articles = await api.getArticles()
   } catch (err) {
     console.log(err.message)
     console.log(err.config)
@@ -128,6 +129,27 @@ exports.sourceNodes = async ({ actions }) => {
     }
 
     createNode(partnerNode)
+  })
+
+  /**
+   * Community Partners
+   */
+  articles.forEach(article => {
+    const content = JSON.stringify(article)
+    const contentDigest = getContentDigest(content)
+
+    const articleNode = {
+      ...article,
+      parent: null,
+      children: [],
+      internal: {
+        type: 'Article',
+        contentDigest,
+        content,
+      },
+    }
+
+    createNode(articleNode)
   })
 
   return

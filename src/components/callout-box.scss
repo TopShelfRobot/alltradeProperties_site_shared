@@ -1,34 +1,44 @@
 @import 'variables';
+@import 'bootstrap/scss/mixins';
 
 .callout-box {
+  height: 100%;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-  margin: 0 0 29px;
+  // margin: 0 0 29px;
   padding: 27px 10px 29px;
   text-align: center;
 
+  display: flex;
+  align-items: center;
+
   .callout-content {
-    display: inline-block;
+    width: 100%;
   }
 
+  
   .callout-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: $yellow;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 12px 0 0 0;
+    // display: inline-block;
+    // vertical-align: middle;
+    // margin: 12px 0 0 0;
     font-size: 50px;
     line-height: 60px;
-    float: left;
-    margin-right: 2rem;
+    // float: left;
+    // margin-right: 2rem;
   }
 
   .callout-text {
     line-height: 1;
-    margin: 0 18px 0 0;
+    // margin: 0 18px 0 0;
     text-align: left;
-    float: left;
+    // float: left;
 
     .stat {
       display: block;
@@ -36,5 +46,11 @@
       font-size: 50px;
       font-weight: bold;
     }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 1em;
+      text-align: center;
+    }
+
   }
 }

@@ -23,4 +23,6 @@ module.exports = {
 
   // Community partners
   getCommunityPartners: () => request.get('/partner'),
+
+  getArticles: () => request.get('/articles'),
 }

@@ -76,8 +76,8 @@ class ResidentsPage extends React.Component {
                 you can pay your rent at the grocery store and other participating locations!
               </p>
 
-              <Row>
-                <div className="col-sm-6">
+              <Row className="align-items-stretch">
+                <div className="col-md-6 mb-3">
                   <CalloutBox
                     icon={UsersIcon}
                     pre="More than"
@@ -86,7 +86,7 @@ class ResidentsPage extends React.Component {
                   />
                 </div>
 
-                <div className="col-sm-6">
+                <div className="col-md-6 mb-3">
                   <CalloutBox
                     icon={HouseIcon}
                     pre="Listings:"
@@ -96,7 +96,7 @@ class ResidentsPage extends React.Component {
               </Row>
 
               <Row>
-                <div className="col-sm-6">
+                <div className="col-md-6 mb-3">
                   <CalloutBox
                     icon={CalendarIcon}
                     pre="Available"
@@ -105,7 +105,7 @@ class ResidentsPage extends React.Component {
                   />
                 </div>
 
-                <div className="col-sm-6">
+                <div className="col-md-6 mb-3">
                   <CalloutBox
                     icon={WrenchIcon}
                     pre="Serving you from"
