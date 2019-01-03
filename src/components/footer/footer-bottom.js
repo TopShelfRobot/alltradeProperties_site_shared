@@ -4,6 +4,8 @@ import Container from '../container'
 import Row from '../row'
 import './footer-bottom.scss'
 
+const currentYear = new Date().getFullYear()
+
 const FooterBottom = props => (
   <div className="footer-bottom">
     <Container>
@@ -42,7 +44,7 @@ const FooterBottom = props => (
             </li>
           </ul>
           <p className="remove-bottom">
-            <a href="/">©Alltrade Property Management, LLC, 2018</a>
+            <a href="/">©Alltrade Property Management, LLC, {currentYear}</a>
           </p>
           <a href="/">Privacy Policy</a>
         </div>

@@ -16,7 +16,8 @@ export default class ListingGallery extends React.Component {
   }
 
   handleGoToPage = newPage => () => {
-    const { units, pageSize } = this.state
+    const { units } = this.props
+    const { pageSize } = this.state
     if (newPage < 1) return
     if (newPage > Math.ceil(units.length / pageSize)) return
     this.setState({ page: newPage })
