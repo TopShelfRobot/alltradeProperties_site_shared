@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import Container from '../components/container'
 
 export default class CareersPage extends React.Component {
   componentDidMount() {
@@ -16,7 +17,7 @@ export default class CareersPage extends React.Component {
   render() {
     return (
       <Layout pageTitle="Careers">
-        <div id="newton-container" />
+        <Container id="newton-container" />
       </Layout>
     )
   }
