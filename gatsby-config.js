@@ -25,7 +25,7 @@ module.exports = {
         },
         { label: 'Offices', url: '/offices'},
         { label: 'Company', url: '/company', sub: [
-          // { label: 'Blog', url: '/blog'},
+          { label: 'Blog', url: '/blog'},
           { label: 'Careers', url: '/careers'},
         ]},
         { label: 'Residents', url: '/residents'},
