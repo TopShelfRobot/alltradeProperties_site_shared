@@ -62,19 +62,19 @@ export const querystringToQuery = qs => {
 
     switch (key) {
       case 'bathsMin':
-        query.baths = query.baths || [1, 5]
+        query.baths = query.baths || [0, 5]
         query.baths[0] = value
         break
       case 'bathsMax':
-        query.baths = query.baths || [1, 5]
+        query.baths = query.baths || [0, 5]
         query.baths[1] = value
         break
       case 'bedsMin':
-        query.beds = query.beds || [1, 5]
+        query.beds = query.beds || [0, 5]
         query.beds[0] = value
         break
       case 'bedsMax':
-        query.beds = query.beds || [1, 5]
+        query.beds = query.beds || [0, 5]
         query.beds[1] = value
         break
       case 'rentMin':
