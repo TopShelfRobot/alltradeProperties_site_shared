@@ -3,8 +3,8 @@ const DEFAULT_FORM = {
   type: '',
   neighborhood: '',
   officeGroup: '',
-  beds: [0, 5],
-  baths: [0, 5],
+  beds: [1, 5],
+  baths: [1, 5],
   rent: ['', ''],
   section8: false,
   petsAllowed: false,
@@ -102,10 +102,10 @@ export const queryToBody = query => {
   if (query.officeGroup) body.officeGroup = query.officeGroup
   if (query.propertyGroup) body.propertyGroup = query.propertyGroup
   if (query.beds) {
-    body.beds = [query.beds[0] || null, query.beds[1] || null]
+    body.beds = [query.beds[0] > 1 ? query.beds[0] : null, query.beds[1] || null]
   }
   if (query.baths) {
-    body.baths = [query.baths[0] || null, query.baths[1] || null]
+    body.baths = [query.baths[0] > 1 ? query.baths[0] : null, query.baths[1] || null]
   }
   if (query.rent) {
     body.rent = [query.rent[0] || null, query.rent[1] || null]
