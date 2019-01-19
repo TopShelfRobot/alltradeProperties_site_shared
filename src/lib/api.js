@@ -1,28 +1,26 @@
-const request = require('./request')
+import request from './request'
 
-module.exports = {
-  getFeaturedUnits: qs => request.get(`/prop/featured${qs ? '?' + qs : ''}`),
-  getTypes: () => request.get('/prop/types'),
-  getNeighborhoods: () => request.get('/prop/neighborhoods'),
-  getOfficeGroups: () => request.get('/prop/officeGroups'),
-  getPropertyGroups: () => request.get('/prop/propertyGroups'),
-  getUnits: query => request.post('/prop/units/search', query),
-  getUnit: unitID => request.get(`/prop/units/${unitID}`),
-  getOffices: () => request.get('/prop/offices'),
+export const getFeaturedUnits = qs => request.get(`/prop/featured${qs ? '?' + qs : ''}`)
+export const getTypes = () => request.get('/prop/types')
+export const getNeighborhoods = () => request.get('/prop/neighborhoods')
+export const getOfficeGroups = () => request.get('/prop/officeGroups')
+export const getPropertyGroups = () => request.get('/prop/propertyGroups')
+export const getUnits = query => request.post('/prop/units/search', query)
+export const getUnit = unitID => request.get(`/prop/units/${unitID}`)
+export const getOffices = () => request.get('/prop/offices')
 
-  getEvictionResources: () => request.get('/eviction'),
+export const getEvictionResources = () => request.get('/eviction')
 
-  // Contact form
-  generalContact: contact => request.post('/contact', contact),
+// Contact form
+export const generalContact = contact => request.post('/contact', contact)
 
-  // Snippets
-  getSnippets: () => request.get('/snippets'),
+// Snippets
+export const getSnippets = () => request.get('/snippets')
 
-  // Team
-  getTeamMembers: () => request.get('/team'),
+// Team
+export const getTeamMembers = () => request.get('/team')
 
-  // Community partners
-  getCommunityPartners: () => request.get('/partner'),
+// Community partners
+export const getCommunityPartners = () => request.get('/partner')
 
-  getArticles: () => request.get('/articles'),
-}
+export const getArticles = () => request.get('/articles')

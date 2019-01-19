@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { ToastContainer } from 'react-toastify'
 
 import Header from './header'
 import Footer from './footer'
 import ApplyCTAButton from './buttons/apply-cta-button'
 
 import '../styles/main.scss'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Layout = ({ children, ...props }) => (
   <StaticQuery
@@ -53,6 +55,7 @@ const Layout = ({ children, ...props }) => (
             }
           />
           <div>{children}</div>
+          <ToastContainer />
           <Footer menu={data.site.siteMetadata.menu} />
         </>
       )

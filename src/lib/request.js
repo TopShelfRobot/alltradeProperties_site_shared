@@ -1,4 +1,5 @@
-const axios = require('axios')
+import { toast } from 'react-toastify'
+import axios from 'axios'
 
 const API_URL = process.env.GATSBY_API_URL
 
@@ -19,8 +20,13 @@ request.interceptors.response.use(
     return response
   },
   error => {
+    const { status, statusText, data } = error.response
+    const { message } = data || {}
+    console.log(error.response)
+    const errorText = message || `${status} - ${statusText}`
+    toast.error(errorText)
     return Promise.reject(error)
   }
 )
 
-module.exports = request
+export default request

@@ -61,16 +61,20 @@ const FooterTop = props => (
 
               <div className="col-sm-4 facebook-wrapper">
                 <h5>Follow Alltrade on Facebook</h5>
-                <iframe
-                  title="Alltrade Facebook"
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falltradeproperties&amp;tabs=timeline&amp;height=250&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId"
-                  width="100%"
-                  height="250"
-                  style={{ border: 'none', overflow: 'hidden' }}
-                  scrolling="no"
-                  frameBorder="0"
-                  allowtransparency="true"
-                />
+                {process.env.NODE_ENV !== 'development' ? (
+                  <iframe
+                    title="Alltrade Facebook"
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falltradeproperties&amp;tabs=timeline&amp;height=250&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId"
+                    width="100%"
+                    height="250"
+                    style={{ border: 'none', overflow: 'hidden' }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowtransparency="true"
+                  />
+                ) : (
+                  <span>FB Disabled in Development mode</span>
+                )}
               </div>
               {/* <div className="text-widget col-sm-4 logo-box">
               <div className="logos">
