@@ -180,6 +180,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
+      console.log({ result })
       result.data.allOfficePagesJson.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
