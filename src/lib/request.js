@@ -20,11 +20,14 @@ request.interceptors.response.use(
     return response
   },
   error => {
-    const { status, statusText, data } = error.response
-    const { message } = data || {}
-    console.log(error.response)
-    const errorText = message || `${status} - ${statusText}`
-    toast.error(errorText)
+    if (error.response) {
+      const { status, statusText, data } = error.response
+      const { message } = data || {}
+      console.error(error.response)
+      const errorText = message || `${status} - ${statusText}`
+      toast.error(errorText)
+    }
+
     return Promise.reject(error)
   }
 )
