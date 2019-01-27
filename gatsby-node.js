@@ -29,8 +29,7 @@ exports.sourceNodes = async ({ actions }) => {
     console.log('BUILDING partners', (partners || []).length)
     console.log('BUILDING articles', (articles || []).length)
   } catch (err) {
-    console.log(err.message)
-    console.log(err.config)
+    console.error(err)
   }
 
   /**
