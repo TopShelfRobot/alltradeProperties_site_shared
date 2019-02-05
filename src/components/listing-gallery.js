@@ -5,6 +5,8 @@ import UnitListing from './unit-listing'
 import Row from './row'
 import './listing-gallery.scss'
 
+const BLANK_UNITS = [{}, {}, {}, {}, {}, {}, {}, {}, {}]
+
 export default class ListingGallery extends React.Component {
   constructor(props) {
     super(props)
@@ -25,23 +27,26 @@ export default class ListingGallery extends React.Component {
 
   render() {
     const { page, pageSize } = this.state
-    const { units: allUnits } = this.props
+    const { units: allUnits, isLoading } = this.props
     const offset = (page - 1) * pageSize
     const units = allUnits.slice(offset, offset + pageSize)
     const totalPages = Math.ceil(allUnits.length / pageSize)
 
+    const unitsDisplay = isLoading ? BLANK_UNITS : units
+
+    console.log({ isLoading, unitsDisplay })
     return (
       <div className="listing-gallery">
         <div className="page-number">
           Page {page} of {totalPages} ({allUnits.length} units)
         </div>
         <Row>
-          {units.map(unit => (
-            <div key={`listing-${unit.UnitID}`} className="col-4 mb-3">
-              <UnitListing unit={unit} />
+          {unitsDisplay.map((unit, idx) => (
+            <div key={`listing-${idx}`} className="col-4 mb-3">
+              <UnitListing unit={unit} isLoading={isLoading} />
             </div>
           ))}
-          {!units.length && <h4>No units match your criteria.</h4>}
+          {!unitsDisplay.length && !isLoading && <h4>No units match your criteria.</h4>}
         </Row>
         <Pager current={page} total={totalPages} onGoTo={this.handleGoToPage} />
       </div>

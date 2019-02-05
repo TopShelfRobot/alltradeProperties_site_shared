@@ -19,6 +19,7 @@ class ListingPage extends React.Component {
       types: [],
       neighborhoods: [],
       officeGroups: [],
+      isLoading: true,
     }
 
     this.handleSearchFormSubmit = this.handleSearchFormSubmit.bind(this)
@@ -33,8 +34,8 @@ class ListingPage extends React.Component {
       api.getOfficeGroups(),
       this.getUnits(query),
     ])
-    this.setState({ types, neighborhoods, officeGroups, query, units })
-    // querystringToQuery(qs);
+
+    this.setState({ types, neighborhoods, officeGroups, query, units, isLoading: false })
   }
 
   getUnits = async query => {
@@ -58,7 +59,7 @@ class ListingPage extends React.Component {
   }
 
   render() {
-    const { types, neighborhoods, officeGroups, query, units } = this.state
+    const { types, neighborhoods, officeGroups, query, units, isLoading } = this.state
 
     return (
       <Layout>
@@ -76,7 +77,7 @@ class ListingPage extends React.Component {
             </aside>
 
             <section className="col-12 col-sm-8 order-first">
-              <ListingGallery units={units} />
+              <ListingGallery isLoading={isLoading} units={units} />
             </section>
           </Row>
         </Container>
