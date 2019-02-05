@@ -34,7 +34,6 @@ export default class ListingGallery extends React.Component {
 
     const unitsDisplay = isLoading ? BLANK_UNITS : units
 
-    console.log({ isLoading, unitsDisplay })
     return (
       <div className="listing-gallery">
         <div className="page-number">
