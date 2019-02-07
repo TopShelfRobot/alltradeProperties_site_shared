@@ -21,9 +21,15 @@ exports.sourceNodes = async ({ actions }) => {
     teamMembers = await api.getTeamMembers()
     partners = await api.getCommunityPartners()
     articles = await api.getArticles()
+
+    console.log('BUILDING resources', (resources || []).length)
+    console.log('BUILDING snippets', (snippets || []).length)
+    console.log('BUILDING offices', (offices || []).length)
+    console.log('BUILDING teamMembers', (teamMembers || []).length)
+    console.log('BUILDING partners', (partners || []).length)
+    console.log('BUILDING articles', (articles || []).length)
   } catch (err) {
-    console.log(err.message)
-    console.log(err.config)
+    console.error(err)
   }
 
   /**

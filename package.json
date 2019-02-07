@@ -40,7 +40,10 @@
     "react-emotion": "^9.2.12",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
+    "react-loading": "^2.0.3",
+    "react-loading-skeleton": "^1.0.0",
     "react-responsive-carousel": "^3.1.45",
+    "react-toastify": "^4.5.2",
     "rebass": "^3.0.0-10",
     "styled-components": "^4.1.1"
   },
