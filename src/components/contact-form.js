@@ -9,6 +9,7 @@ import * as api from '../lib/api'
 import $ from 'jquery'
 
 import './contact-form.scss'
+import './contact-form-guestcard.scss'
 
 const EMPTY_FORM = {
   name: '',

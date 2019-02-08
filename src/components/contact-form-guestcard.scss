@@ -1,0 +1,251 @@
+$main-color: #a81b1c;
+
+.GuestCardModal {
+  display: block;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.GuestCardFieldsContainer {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 5px 20px 20px 20px;
+  border: 1px solid #888;
+  display: inline-block;
+}
+
+.GuestCardClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+  .GuestCardClose:hover,
+  .GuestCardClose:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+  }
+
+.guestCardCheckContainer {
+  text-align: center;
+  min-height: 70px;
+  min-width: 200px;
+  color: black;
+  padding: 0 15px 0 15px;
+  display: table-row;
+}
+
+.guestCardFieldsContainer {
+  text-align: center;
+  min-height: 70px;
+  min-width: 200px;
+  color: black;
+  padding: 0 15px 0 15px;
+}
+
+.guestCardFieldCheck {
+  margin-left: 0.5em;
+}
+
+.guestCardField {
+  margin: 5px 0;
+}
+
+input.guestCardFieldInput {
+  padding: 5px 3px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid #c4d5e0;
+  border-width: 1px;
+  font-weight: normal;
+}
+
+  input.guestCardFieldInput:focus {
+     outline: none;
+     background-color: #91bddd;
+     color: #fff;
+     -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+     -ms-transition: all 0.3s ease-out;
+     -o-transition: all 0.3s ease-out;
+     transition: all 0.3s ease-out
+  }
+
+select.guestCardField {
+  display: block;
+  min-width: initial;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid #c4d5e0;
+  height: 2.4375rem;
+}
+
+textarea.guestCardFieldInput {
+  resize: none;
+  padding: 5px 3px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid #c4d5e0;
+  border-width: 1px;
+  font-weight: normal;
+}
+
+  textarea.guestCardFieldInput:focus {
+     outline: none;
+     background-color: #91bddd;
+     color: #fff;
+     -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+     -ms-transition: all 0.3s ease-out;
+     -o-transition: all 0.3s ease-out;
+     transition: all 0.3s ease-out
+  }
+
+
+.guestCardFieldLabel {
+  text-align: left;
+  display: inline-block;
+  float: left;
+  margin: 3px 0px;
+  color: $main-color; //#054c7e;
+  font-family: 'Raleway', sans-serif;
+}
+
+label.guestCardRequiredField {
+  font-weight: bold;
+}
+
+input.guestCardRequiredField {
+  border-color: $main-color; //#076dab;
+  border-width: 1px;
+  font-weight: normal;
+}
+
+.guestCardButtonContainer {
+  text-align: center;
+  margin-top: 10px;
+  width: -webkit-fill-available;
+}
+
+.guestCardButton {
+  background: #ffd90e; //#076dab;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  min-height: 35px;
+  min-width: 80px;
+  width: inherit;
+  cursor: pointer;
+}
+
+.guestCardButtonSubmitting {
+  color: #000000;
+  background: #d3d3d3;
+  cursor: default;
+  text-align: center;
+  width: inherit;
+}
+
+.guestCardForm {
+  overflow-y: auto;
+  display: inline-block;
+  width: 100%;
+}
+
+.guestCardFieldGroup {
+  display: grid;
+}
+
+.guestCardCaptcha {
+  display: inline-block;
+}
+
+.guestCardCaptchaContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.guestCardLoader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #A9A9A9;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  animation: guestCardLoaderSpin 2s linear infinite;
+  float: right;
+}
+
+.guestCardMessageContainer {
+  text-align: center;
+  margin-top: 10px;
+  width: -webkit-fill-available;
+}
+
+.guestCardMessage {
+  font-size: 18px;
+}
+
+.guestCardProperty {
+}
+
+.guestCardSubmittedMessage {
+  display: block;
+}
+
+.guestCardSuccessButton {
+  margin-top: 2em;
+}
+
+.guestCardHelpContainer {
+  float: right;
+}
+
+.guestCardHelpCircle {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  padding: 2px;
+  background: #076dab;
+  color: #ffffff;
+  text-align: center;
+  font: 12px normal;
+  cursor: help;
+  float: right;
+}
+
+.guestCardTooltipText {
+  background-color: rgb(7, 109, 171);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: normal;
+  padding: 3px 3px;
+  z-index: 1;
+  position: absolute;
+  font: 16px normal;
+  -webkit-transform: translateX(-90%);
+  transform: translateX(-90%) translateY(-105%);
+  max-width: 22em;
+}
+
+@keyframes guestCardLoaderSpin {
+  0% {
+     transform: rotate(0deg);
+  }
+
+  100% {
+     transform: rotate(360deg);
+  }
+}
