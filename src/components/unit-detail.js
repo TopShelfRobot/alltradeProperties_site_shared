@@ -31,7 +31,7 @@ const UnitDetail = ({ unit, ...props }) => (
           <Service image="results" title="Deposit" subtitle={`$${unit.deposit}`} />
         </div>
         <div className="col-sm-4">
-          <Service image="sqft" title="Size" subtitle={`$${unit.sqft}`} />
+          <Service image="sqft" title="Size" subtitle={`${unit.sqft}`} />
         </div>
       </Row>
 
