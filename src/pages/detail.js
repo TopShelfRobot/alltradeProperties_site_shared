@@ -11,7 +11,6 @@ import { ApplyNowButton } from '../components/buttons'
 import UnitDetailTitle from '../components/unit-detail-title'
 import UnitDetailAvailable from '../components/unit-detail-available'
 import UnitDetail from '../components/unit-detail'
-import TenantTurner from '../components/tenant-turner'
 
 import { getQueryFromLocation, getDefaultForm } from '../lib/query'
 
@@ -77,7 +76,6 @@ class DetailPage extends React.Component {
                 />
               )}
               <ApplyNowButton UnitID={unit.UnitID} />
-              <TenantTurner />
             </aside>
 
             <section className="col-12 col-sm-8 order-first mb-3">

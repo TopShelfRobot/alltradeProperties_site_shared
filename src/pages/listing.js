@@ -8,6 +8,7 @@ import Row from '../components/row'
 import SearchFormListing from '../components/search-form-listing'
 import ListingGallery from '../components/listing-gallery'
 import { queryToQuerystring, getQueryFromLocation, queryToBody, getDefaultForm } from '../lib/query'
+import SelfShowingCTA from '../components/self-showing-cta'
 
 class ListingPage extends React.Component {
   constructor(props) {
@@ -74,6 +75,7 @@ class ListingPage extends React.Component {
                 neighborhoods={neighborhoods}
                 officeGroups={officeGroups}
               />
+              <SelfShowingCTA />
             </aside>
 
             <section className="col-12 col-sm-8 order-first">
