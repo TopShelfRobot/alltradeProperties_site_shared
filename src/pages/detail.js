@@ -60,12 +60,21 @@ class DetailPage extends React.Component {
           <Row>
             <aside className="col-12 col-sm-4 order-last">
               <PropertyContact property={property} />
-              <ContactForm
-                className="my-3"
-                title="Find out more about this rental"
-                messagePlaceholder={`I'd like to know more aobut ${unit.fullAddress}`}
-                toEmail={property.Email}
-              />
+              {/** 
+                Only mount the contact form after the unit has been retrieved.
+                The ContactForm element creates a <script> tag when mounted and
+                must have the UnitID and PropertyID at that time.
+              */}
+              {unit.UnitID && (
+                <ContactForm
+                  className="my-3"
+                  title="Find out more about this rental"
+                  messagePlaceholder={`I'd like to know more aobut ${unit.fullAddress}`}
+                  toEmail={property.Email}
+                  UnitID={unit.UnitID}
+                  PropertyID={unit.PropertyID}
+                />
+              )}
               <ApplyNowButton UnitID={unit.UnitID} />
             </aside>
 

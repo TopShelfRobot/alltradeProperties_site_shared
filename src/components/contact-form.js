@@ -77,14 +77,16 @@ class ContactForm extends React.Component {
   }
 
   componentDidMount() {
+    const { UnitID, PropertyID } = this.props
+    console.log({ UnitID, PropertyID })
     const script = document.createElement('script')
     const scriptText = `
     const rmGuestCardOptions = {
       DBID: 'alltrade',
       Location: 'Live Company',
       TemplateName: 'Prospect Guest Card (Website)',
-      // DefaultProperty: 'PROPSHORTNAME',
-      // UnitID: 999,
+      ${UnitID ? `UnitID: ${UnitID},` : ''}
+      ${PropertyID ? `DefaultProperty: ${PropertyID},` : ''}
     };
 
     $(document).ready(function() {
