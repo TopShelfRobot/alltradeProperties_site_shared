@@ -78,7 +78,7 @@ class ContactForm extends React.Component {
 
   componentDidMount() {
     const { UnitID, PropertyID } = this.props
-    console.log({ UnitID, PropertyID })
+
     const script = document.createElement('script')
     const scriptText = `
     const rmGuestCardOptions = {
