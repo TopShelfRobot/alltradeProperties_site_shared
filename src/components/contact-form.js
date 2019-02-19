@@ -6,10 +6,8 @@ import TitledPanel from './titled-panel'
 import { EmailIcon } from './icons'
 import { BlackButton } from './buttons'
 import * as api from '../lib/api'
-import $ from 'jquery'
 
 import './contact-form.scss'
-import './contact-form-guestcard.scss'
 
 const EMPTY_FORM = {
   name: '',
@@ -76,27 +74,6 @@ class ContactForm extends React.Component {
       })
   }
 
-  componentDidMount() {
-    const { UnitID, PropertyID } = this.props
-
-    const script = document.createElement('script')
-    const scriptText = `
-    const rmGuestCardOptions = {
-      DBID: 'alltrade',
-      Location: 'Live Company',
-      TemplateName: 'Prospect Guest Card (Website)',
-      ${UnitID ? `UnitID: ${UnitID},` : ''}
-      ${PropertyID ? `DefaultProperty: ${PropertyID},` : ''}
-    };
-
-    $(document).ready(function() {
-      $('.rmGuestCardContainer').GuestCardForm('initialize', rmGuestCardOptions);
-    })
-    `
-    script.innerHTML = scriptText
-    document.body.appendChild(script)
-  }
-
   render() {
     const { form, formErrors, error, success } = this.state
     const {
@@ -112,7 +89,105 @@ class ContactForm extends React.Component {
 
     return (
       <TitledPanel className={cn('contact-form', classNameProp)} title={title} titleIcon={titleIcon}>
-        <div className="rmGuestCardContainer" />
+        <form action="post" className="remove-bottom" id="mail-form" onSubmit={this.handleSubmit}>
+          <input type="hidden" id="mail-toEmail" value={toEmail} />
+
+          <Row>
+            <div className="col-12 input-group">
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={this.handleChange}
+                placeholder="Name"
+                className="form-control"
+                required
+              />
+              <Error error={formErrors.name} />
+            </div>
+            <div className="col-12 input-group">
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={this.handleChange}
+                placeholder="Email"
+                className="form-control"
+              />
+              <Error error={formErrors.email} />
+            </div>
+            {showCurrentAddress && (
+              <div className="col-12 input-group">
+                <input
+                  type="text"
+                  name="currentAddress"
+                  value={form.currentAddress}
+                  onChange={this.handleChange}
+                  placeholder="Current Address"
+                  className="form-control"
+                />
+                <Error error={formErrors.currentAddress} />
+              </div>
+            )}
+            <div className="col-12 input-group">
+              <input
+                type="text"
+                name="phone"
+                value={form.phone}
+                onChange={this.handleChange}
+                placeholder="Phone Number"
+                className="form-control"
+                required
+              />
+              <Error error={formErrors.phone} />
+            </div>
+            {showNumberOfUnits && (
+              <div className="col-12 input-group">
+                <input
+                  type="text"
+                  name="numberOfUnits"
+                  value={form.numberOfUnits}
+                  onChange={this.handleChange}
+                  placeholder="Number of Units"
+                  className="form-control"
+                  required
+                />
+                <Error error={formErrors.numberOfUnits} />
+              </div>
+            )}
+            {showPropertyType && (
+              <div className="col-12 input-group">
+                <select
+                  name="propertyType"
+                  value={form.propertyType || ''}
+                  onChange={this.handleChange}
+                  className="form-control"
+                >
+                  <option>Multi-family</option>
+                  <option>Single family home</option>
+                  <option>Mixed portfolio</option>
+                  <option>Commercial</option>
+                </select>
+              </div>
+            )}
+            <div className="col-12 input-group">
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={this.handleChange}
+                rows="10"
+                className="form-control"
+                placeholder={messagePlaceholder || ''}
+              />
+              <Error error={formErrors.message} />
+            </div>
+            <div className="col-12 input-group mb-0">
+              {error && <p className="text-danger">{error}</p>}
+              {success && <p className="text-success">{success}</p>}
+              <BlackButton onClick={this.handleSubmit}>Submit</BlackButton>
+            </div>
+          </Row>
+        </form>
       </TitledPanel>
     )
   }
