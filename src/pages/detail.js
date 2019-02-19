@@ -7,6 +7,7 @@ import Container from '../components/container'
 import Row from '../components/row'
 import PropertyContact from '../components/property-contact'
 import ContactForm from '../components/contact-form'
+import GuestCardContactForm from '../components/guest-card'
 import { ApplyNowButton } from '../components/buttons'
 import UnitDetailTitle from '../components/unit-detail-title'
 import UnitDetailAvailable from '../components/unit-detail-available'
@@ -61,12 +62,12 @@ class DetailPage extends React.Component {
             <aside className="col-12 col-sm-4 order-last">
               <PropertyContact property={property} />
               {/** 
-                Only mount the contact form after the unit has been retrieved.
-                The ContactForm element creates a <script> tag when mounted and
-                must have the UnitID and PropertyID at that time.
+                Only mount the gc contact form after the unit has been retrieved.
+                The GuestCardContactForm element creates a <script> tag when mounted 
+                and must have the UnitID and PropertyID at that time.
               */}
               {unit.UnitID && (
-                <ContactForm
+                <GuestCardContactForm
                   className="my-3"
                   title="Find out more about this rental"
                   messagePlaceholder={`I'd like to know more aobut ${unit.fullAddress}`}
