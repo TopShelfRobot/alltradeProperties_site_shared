@@ -133,7 +133,8 @@ class Gallery extends Component {
   calculateContainerWidth(images, rowHeight, margin, mainImageAspectRatio) {
     const mainWidth = this.getMainImageWidth()
     const widths = images.slice(1).map(image => rowHeight * image.aspectRatio + margin + margin)
-    const halfWidth = widths.reduce((acc, w) => acc + w, 0) / 2
+    const width = widths.reduce((acc, w) => acc + w, 0)
+    const halfWidth = width / 2
     const containerWidth = widths.reduce((acc, w) => acc + (acc >= halfWidth ? 0 : w), 0)
     return mainWidth + containerWidth
   }

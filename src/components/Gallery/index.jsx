@@ -42,10 +42,10 @@ export default class PropertyGallery extends React.Component {
           new Promise(resolve => {
             const i = new Image()
             i.onload = () => {
-              const aspectRatio = i.height / i.width
+              const aspectRatio = i.width / i.height
               images[image.index].aspectRatio = aspectRatio
               images[image.index].thumbnailWidth = 300
-              images[image.index].thumbnailHeight = 300 / aspectRatio
+              images[image.index].thumbnailHeight = 300 * aspectRatio
               resolve(image)
             }
             i.src = image.src
