@@ -27,7 +27,7 @@ const UnitDetail = ({ unit, loading, ...props }) => {
     height: 300,
   })
 
-  const images = [...unit.images]
+  const images = [...(unit.images || [])]
   images.splice(1, 0, googleImageUrl)
 
   return (
