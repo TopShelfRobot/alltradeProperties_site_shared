@@ -12,6 +12,7 @@ import { ApplyNowButton } from '../components/buttons'
 import UnitDetailTitle from '../components/unit-detail-title'
 import UnitDetailAvailable from '../components/unit-detail-available'
 import UnitDetail from '../components/unit-detail'
+// import Gallery from '../components/Gallery'
 
 import { getQueryFromLocation, getDefaultForm } from '../lib/query'
 
@@ -27,6 +28,7 @@ class DetailPage extends React.Component {
       types: [],
       neighborhoods: [],
       officeGroups: [],
+      loading: true,
     }
   }
 
@@ -40,11 +42,11 @@ class DetailPage extends React.Component {
     }
 
     const { Property: property } = unit
-    this.setState({ unit, property })
+    this.setState({ unit, property, loading: false })
   }
 
   render() {
-    const { unit, property } = this.state
+    const { unit, property, loading } = this.state
     return (
       <Layout pageTitle="Unit Details" secondaryPageTitle={property.primaryPhoneNumber}>
         <Container>
@@ -80,7 +82,7 @@ class DetailPage extends React.Component {
             </aside>
 
             <section className="col-12 col-sm-8 order-first mb-3">
-              <UnitDetail unit={unit} />
+              <UnitDetail unit={unit} loading={loading} />
             </section>
           </Row>
         </Container>

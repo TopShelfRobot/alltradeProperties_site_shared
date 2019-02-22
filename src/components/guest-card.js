@@ -16,7 +16,7 @@ class GuestCard extends React.Component {
       const rmGuestCardOptions = {
         DBID: 'alltrade',
         Location: 'Live Company',
-        TemplateName: 'Prospect Guest Card (Website)',
+        TemplateName: 'Prospect Guest Card Website',
       }
       if (UnitID) rmGuestCardOptions.UnitID = UnitID
       if (PropertyID) rmGuestCardOptions.DefaultProperty = PropertyID
