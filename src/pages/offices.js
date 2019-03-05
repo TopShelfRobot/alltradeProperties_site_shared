@@ -62,7 +62,7 @@ const offices = [
     hours: [
       { days: 'Mon, Wed & Fri', hours: '9a - 5p' },
       { days: 'Tuesday & Thursday', hours: '9a - 6p' },
-      { days: 'Saturday', hours: '10a - 2p' },
+      { days: 'Saturday', hours: '10a - 4p' },
     ],
     address: ['1451 S 1st St #2', 'Louisville, KY 40208'],
     phone: '502-637-7666',
@@ -78,8 +78,8 @@ const offices = [
       zoom: 17,
     },
     hours: [
-      { days: 'Mon, Wed &amp; Fri', hours: '9a - 5p' },
-      { days: 'Tuesday &amp; Thursday', hours: '9a - 6p' },
+      { days: 'Mon, Wed & Fri', hours: '9a - 5p' },
+      { days: 'Tuesday & Thursday', hours: '9a - 6p' },
       { days: 'Saturday', hours: '10a - 2p' },
     ],
     address: ['5438 New Cut Rd #204', 'Louisville, KY 40214'],
