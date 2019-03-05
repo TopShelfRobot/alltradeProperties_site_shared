@@ -5,9 +5,9 @@ import 'rc-slider/assets/index.css'
 
 import './slider-input.scss'
 
-const SliderInput = ({ onChange, value, unit, iconUrl, ...props }) => {
-  const [min, max] = value
-  const label = `${min} - ${max} ${unit}`
+const SliderInput = ({ onChange, value, unit, iconUrl, min = 1, max = 6, ...props }) => {
+  const [minVal, maxVal] = value
+  const label = `${minVal} - ${maxVal} ${unit}`
   const inputStyle = iconUrl ? { background: `white url(${iconUrl}) no-repeat 10px center` } : {}
 
   return (
@@ -19,7 +19,7 @@ const SliderInput = ({ onChange, value, unit, iconUrl, ...props }) => {
         style={inputStyle}
         readOnly
       />
-      <Range min={1} max={5} defaultValue={[1, 5]} allowCross={false} onChange={onChange} value={value} />
+      <Range min={min} max={max} defaultValue={[min, max]} allowCross={false} onChange={onChange} value={value} />
     </div>
   )
 }

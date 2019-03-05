@@ -3,8 +3,8 @@ const DEFAULT_FORM = {
   type: '',
   neighborhood: '',
   officeGroup: '',
-  beds: [1, 5],
-  baths: [1, 5],
+  beds: [1, 6],
+  baths: [1, 6],
   rent: ['', ''],
   section8: false,
   petsAllowed: false,
@@ -35,9 +35,9 @@ export const queryToQuerystring = query => {
   if (query.officeGroup) qsParts.push(`officeGroup=${query.officeGroup}`)
   if (query.propertyGroup) qsParts.push(`propertyGroup=${query.propertyGroup}`)
   if (query.beds && query.beds[0] !== '' && query.beds[0] > 1) qsParts.push(`bedsMin=${query.beds[0]}`)
-  if (query.beds && query.beds[1] !== '' && query.beds[1] < 5) qsParts.push(`bedsMax=${query.beds[1]}`)
+  if (query.beds && query.beds[1] !== '' && query.beds[1] < 6) qsParts.push(`bedsMax=${query.beds[1]}`)
   if (query.baths && query.baths[0] !== '' && query.baths[0] > 1) qsParts.push(`bathsMin=${query.baths[0]}`)
-  if (query.baths && query.baths[1] !== '' && query.baths[1] < 5) qsParts.push(`bathsMax=${query.baths[1]}`)
+  if (query.baths && query.baths[1] !== '' && query.baths[1] < 6) qsParts.push(`bathsMax=${query.baths[1]}`)
   if (query.rent && query.rent[0] !== '') qsParts.push(`rentMin=${query.rent[0]}`)
   if (query.rent && query.rent[1] !== '') qsParts.push(`rentMax=${query.rent[1]}`)
   if (query.section8) qsParts.push('section8=1')
@@ -62,19 +62,19 @@ export const querystringToQuery = qs => {
 
     switch (key) {
       case 'bathsMin':
-        query.baths = query.baths || [0, 5]
+        query.baths = query.baths || [0, 6]
         query.baths[0] = value
         break
       case 'bathsMax':
-        query.baths = query.baths || [0, 5]
+        query.baths = query.baths || [0, 6]
         query.baths[1] = value
         break
       case 'bedsMin':
-        query.beds = query.beds || [0, 5]
+        query.beds = query.beds || [0, 6]
         query.beds[0] = value
         break
       case 'bedsMax':
-        query.beds = query.beds || [0, 5]
+        query.beds = query.beds || [0, 6]
         query.beds[1] = value
         break
       case 'rentMin':
