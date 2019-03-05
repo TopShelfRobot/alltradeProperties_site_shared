@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import RowGallery from './RowGallery'
 import Lightbox from 'react-images'
 import CarouselGallery from './CarouselGallery'
@@ -58,22 +59,14 @@ export default class PropertyGallery extends React.Component {
 
   render() {
     const { images, imagesPreloadDone } = this.state
-    const { loading } = this.props
+    const { loading, preserveMainAspectRatio } = this.props
     const rowHeight = 180
     const margin = 2
 
-    // const images = data.gallery.edges
-    //   .map(e => e.node.childImageSharp.fluid)
-    //   .map((image, idx) => ({
-    //     ...image,
-    //     index: idx,
-    //     thumbnail: image.src,
-    //     thumbnailWidth: 300,
-    //     thumbnailHeight: 300 / image.aspectRatio,
-    //   }))
-
     if (loading || !imagesPreloadDone) return <span>loading...</span>
-    console.log({ images })
+
+    const mainImageAspectRatio = preserveMainAspectRatio ? images[0].aspectRatio : 1
+
     return (
       <div
         style={{
@@ -84,7 +77,6 @@ export default class PropertyGallery extends React.Component {
           overflow: 'auto',
         }}
       >
-        {/* <pre>{JSON.stringify(images, null, 2)}</pre> */}
         <RowGallery
           className="d-none d-md-block"
           images={images}
@@ -92,6 +84,7 @@ export default class PropertyGallery extends React.Component {
           margin={margin}
           maxRows={2}
           onImageClick={this.handleImageClick}
+          mainImageAspectRatio={mainImageAspectRatio}
         />
         <CarouselGallery images={images} className="d-block d-md-none" />
         <Lightbox
@@ -105,4 +98,13 @@ export default class PropertyGallery extends React.Component {
       </div>
     )
   }
+}
+
+PropertyGallery.propTypes = {
+  loading: PropTypes.bool,
+  preserveMainAspectRatio: PropTypes.bool,
+}
+
+PropertyGallery.defaultProps = {
+  preserveMainAspectRatio: false,
 }

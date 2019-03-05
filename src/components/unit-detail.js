@@ -32,7 +32,7 @@ const UnitDetail = ({ unit, loading, ...props }) => {
 
   return (
     <div className="unit-detail add-bottom-2 lighted">
-      <Gallery images={images} loading={loading} />
+      <Gallery images={images} loading={loading} preserveMainAspectRatio />
 
       <div className="unit-detail-content px-3 mt-3">
         <Row className="">

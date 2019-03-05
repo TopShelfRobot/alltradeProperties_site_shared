@@ -164,7 +164,10 @@ class Gallery extends Component {
 
   getMainImageWidth = () => {
     const { rowHeight, margin, mainImageAspectRatio } = this.props
-    return (rowHeight + margin) * 2 * mainImageAspectRatio + 2 * margin
+    const imageHeight = (rowHeight + margin) * 2
+    const imageWidth = imageHeight * mainImageAspectRatio
+    const horizontalMargin = 2 * margin
+    return imageWidth + horizontalMargin
   }
 
   render() {
