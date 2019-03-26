@@ -39,10 +39,7 @@ export default class CompanyPage extends React.Component {
                   <Snippet group="owners" snippet="online_access" />
 
                   <Row className="my-3 justify-content-center">
-                    <YellowButton
-                      href="https://alltrade.owa.rentmanager.com/Login?ReturnUrl=%2fShared%2fHome"
-                      target="_blank"
-                    >
+                    <YellowButton href="https://alltrade.owa.rentmanager.com" target="_blank">
                       Go to OWA
                     </YellowButton>
                   </Row>
