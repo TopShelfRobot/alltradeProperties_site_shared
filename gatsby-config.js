@@ -10,17 +10,17 @@ module.exports = {
         {
           label: "Home",
           url: '/',
-          sub: [
-            {label: "Old Louisville", url: "/officePages/old_louisville"},
-            {label: "South End", url: "/officePages/south_end/"},
-            {label: "Lexington Region", url: "/officePages/lexington/"},
-          ]
+          
         },
         {
           label: "Listings",
           url: '/listing',
           sub: [
-            {label: "Resident Selection Guidelines", url: "/resident-selection"},
+            {label: "Old Louisville", url: "/officePages/old_louisville"},
+            {label: "South End", url: "/officePages/south_end/"},
+            {label: "Lexington Region", url: "/officePages/lexington/"},
+            {label: "Highlands/Cherokee Triangle", url: "/officePages/highlands/"},
+            {label: "Southern Indiana", url: "/officePages/southern_indiana/"},
           ]
         },
         { label: 'Offices', url: '/offices'},
@@ -28,7 +28,13 @@ module.exports = {
           { label: 'Blog', url: '/blog'},
           { label: 'Careers', url: '/careers'},
         ]},
-        { label: 'Residents', url: '/residents'},
+        { 
+          label: 'Residents', 
+          url: '/residents',
+          sub: [
+            {label: "Resident Selection Guidelines", url: "/resident-selection"},
+          ]
+      },
         { label: 'Owners', url: '/owners'},
         { label: 'Contact', url: '/contact'},
       ]

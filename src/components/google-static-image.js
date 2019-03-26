@@ -2,12 +2,12 @@ import React from 'react'
 
 const googleAPIKey = 'AIzaSyBgQyrBjywkpP8Xkw6Iy2wI57oBMjZVt1A'
 
-const defaults = {
-  zoom: 13,
-  width: 600,
-  height: 300,
-  maptype: 'roadmap',
-}
+// const defaults = {
+//   zoom: 13,
+//   width: 600,
+//   height: 300,
+//   maptype: 'roadmap',
+// }
 
 export const googleStaticUrl = ({ address, zoom = 13, width = 600, height = 300, maptype = 'roadmap' }) => {
   const pairs = [

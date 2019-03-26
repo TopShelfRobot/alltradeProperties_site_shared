@@ -1,9 +1,7 @@
 import React from 'react'
 
-import Carousel from './unit-detail-carousel'
 import Service from './service'
 import Row from './row'
-import GoogleMapEmbeded from './googleMapEmbedded'
 import './unit-detail.scss'
 import Gallery from './Gallery'
 import GoogleStaticImage, { googleStaticUrl } from './google-static-image'
