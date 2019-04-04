@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, navigate } from 'gatsby'
+import { graphql, navigate, withPrefix } from 'gatsby'
 
 import * as api from '../lib/api'
 import { queryToQuerystring, querystringToQuery, queryToBody, getDefaultForm } from '../lib/query'
@@ -13,7 +13,7 @@ import FeaturedUnitGallery from '../components/featured-unit-gallery'
 import ListingGallery from '../components/listing-gallery'
 import SearchFormListing from '../components/search-form-listing'
 
-import heroImage from '../images/main_bg.jpg'
+import defaultHeroImage from '../images/main_bg.jpg'
 import './office-page.scss'
 
 export default class OfficeSubPage extends React.Component {
@@ -80,6 +80,7 @@ export default class OfficeSubPage extends React.Component {
     const { data } = this.props
     const { featuredUnits, types, neighborhoods, officeGroups, query, units } = this.state
     const officePage = data.officePagesJson
+    const heroImage = officePage.staticImage ? withPrefix(officePage.staticImage) : defaultHeroImage
 
     return (
       <Layout phone={officePage.phone} email={officePage.email}>
@@ -136,6 +137,7 @@ export const query = graphql`
       propertyGroupID
       phone
       email
+      staticImage
       fields {
         slug
       }
