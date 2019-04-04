@@ -14,6 +14,7 @@ import Row from '../components/row'
 import { queryToQuerystring } from '../lib/query'
 import heroImage from '../images/main_bg.jpg'
 import Snippet from '../components/snippet'
+import ActionButton from '../components/action-button'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -51,19 +52,28 @@ class IndexPage extends React.Component {
           </Container>
         </Hero>
         <Container>
-          <Row className="mt-5">
-            <div className="col-6">
-              <h3>Featured Properties</h3>
+          <Row className="my-5">
+            <div className="col-md-4">
+              <Service href="https://alltrade.twa.rentmanager.com/applynow" title="Apply Now" icon="apply" border />
             </div>
-            <div className="col-6">
-              <span className="float-right">
-                <CTAButton href="https://alltrade.twa.rentmanager.com/applynow">
-                  Start your rental application now
-                </CTAButton>
-              </span>
+            <div className="col-md-4">
+              <Service href="https://alltrade.twa.rentmanager.com/applynow" title="Pay Online" icon="credit" border />
+            </div>
+            <div className="col-md-4">
+              <Service
+                href="https://alltrade.twa.rentmanager.com/applynow"
+                title="Report Service Issue"
+                icon="wrench"
+                border
+              />
             </div>
           </Row>
 
+          <Row>
+            <div className="col-12">
+              <h3>Featured Properties</h3>
+            </div>
+          </Row>
           <FeaturedUnitGallery units={featuredUnits || []} />
 
           <div className="row my-5">

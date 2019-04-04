@@ -6,7 +6,7 @@ import './nav-menu.scss'
 const renderItem = level => (item, idx) => {
   const { label, url, sub } = item
   return (
-    <li key={`l${level}-${idx}`}>
+    <li key={`l${level}-${idx}`} style={{ float: 'left' }}>
       <a href={url}>{label}</a>
       {sub && <ul className="nav-dropdown">{(sub || []).map(renderItem(level + 1))}</ul>}
     </li>
