@@ -12,6 +12,8 @@ import SectionTitle from '../components/section-title'
 import Snippet from '../components/snippet'
 import EvictionResourcesTable from '../components/eviction-resources-table'
 
+const payOnlineUrl = process.env.GATSBY_PAY_ONLINE_URL
+
 const paddedSectionStyle = {
   margin: '30px 0',
 }
@@ -54,12 +56,7 @@ class ResidentsPage extends React.Component {
 
               <Row className="justify-content-center">
                 <div className="col-sm-6" style={paddedSectionStyle}>
-                  <YellowButton
-                    className="full-button"
-                    href="https://alltrade.twa.rentmanager.com/"
-                    role="button"
-                    target="_blank"
-                  >
+                  <YellowButton className="full-button" href={payOnlineUrl} role="button" target="_blank">
                     PAY ONLINE
                   </YellowButton>
                 </div>

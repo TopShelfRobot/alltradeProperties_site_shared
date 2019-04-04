@@ -14,7 +14,9 @@ import Row from '../components/row'
 import { queryToQuerystring } from '../lib/query'
 import heroImage from '../images/main_bg.jpg'
 import Snippet from '../components/snippet'
-import ActionButton from '../components/action-button'
+
+const applyNowUrl = process.env.GATSBY_APPLY_NOW_URL
+const payOnlineUrl = process.env.GATSBY_PAY_ONLINE_URL
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -54,18 +56,13 @@ class IndexPage extends React.Component {
         <Container>
           <Row className="my-5">
             <div className="col-md-4">
-              <Service href="https://alltrade.twa.rentmanager.com/applynow" title="Apply Now" icon="apply" border />
+              <Service href={applyNowUrl} title="Apply Now" icon="apply" border />
             </div>
             <div className="col-md-4">
-              <Service href="https://alltrade.twa.rentmanager.com/applynow" title="Pay Online" icon="credit" border />
+              <Service href={payOnlineUrl} title="Pay Online" icon="credit" border />
             </div>
             <div className="col-md-4">
-              <Service
-                href="https://alltrade.twa.rentmanager.com/applynow"
-                title="Report Service Issue"
-                icon="wrench"
-                border
-              />
+              <Service href="/residents" title="Report Service Issue" icon="wrench" border />
             </div>
           </Row>
 
