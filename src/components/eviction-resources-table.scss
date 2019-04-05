@@ -1,6 +1,19 @@
 @import 'variables';
 
 .eviction-resources-table {
+  .resource-filter {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    
+    &.active {
+      border: 1px solid #777;
+    }
+    &:hover {
+      border: 1px solid #777;
+    }
+  }
   .row {
     margin: 0;
   }

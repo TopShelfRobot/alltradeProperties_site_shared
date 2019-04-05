@@ -29,6 +29,7 @@ exports.sourceNodes = async ({ actions }) => {
    * Eviction Resource Nodes
    */
   resources.forEach(resource => {
+    resource.order = resource.order || 0
     const content = JSON.stringify(resource)
     const contentDigest = getContentDigest(content)
 

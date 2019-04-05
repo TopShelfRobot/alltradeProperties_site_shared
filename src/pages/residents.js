@@ -29,6 +29,8 @@ const evictionResourcesQuery = graphql`
           url
           description
           createdAt
+          locale
+          order
         }
       }
     }
@@ -130,11 +132,7 @@ class ResidentsPage extends React.Component {
             query={evictionResourcesQuery}
             render={data => {
               const resources = data.allEvictionResource.edges.map(edge => edge.node)
-              return (
-                <div className="card">
-                  <EvictionResourcesTable resources={resources} />
-                </div>
-              )
+              return <EvictionResourcesTable resources={resources} />
             }}
           />
         </Container>
