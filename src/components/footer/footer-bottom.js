@@ -28,17 +28,21 @@ const FooterBottom = props => (
               </a>
             </li>
             <li>
-              <a id="twitter" href="http://bit.ly/2siIJFR" title="Alltrade on Twitter">
+              <a id="twitter" href="https://twitter.com/alltradeky" title="Alltrade on Twitter">
                 t
               </a>
             </li>
             <li>
-              <a id="youtube" href="http://bit.ly/2s3GXY7" title="Alltrade on YouTube">
+              <a id="youtube" href="https://www.youtube.com/watch?v=-ZLaEpU7nhw" title="Alltrade on YouTube">
                 y
               </a>
             </li>
             <li>
-              <a id="linkedin" href="http://bit.ly/2qnrtO3" title="Alltrade on LinkedIn">
+              <a
+                id="linkedin"
+                href="https://www.linkedin.com/company/alltrade-property-management/about/"
+                title="Alltrade on LinkedIn"
+              >
                 l
               </a>
             </li>

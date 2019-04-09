@@ -7,6 +7,11 @@ import MainAddress from '../main-address'
 import Row from '../row'
 import ehoLogo from '../../images/eho_logo.png'
 
+import fbUrl from '../../images/icons/fb.png'
+import ytUrl from '../../images/icons/yt.png'
+import twUrl from '../../images/icons/tw.png'
+import liUrl from '../../images/icons/li.png'
+
 import './footer-top.scss'
 
 const FooterTop = props => (
@@ -48,6 +53,24 @@ const FooterTop = props => (
                     <MainAddress />
                   </div>
                 </Row>
+              </div>
+              <div className="social-box">
+                <a id="facebook" href="https://www.facebook.com/alltradeproperties" title="Alltrade on Facebook">
+                  <img src={fbUrl} className="social-icon" alt="Facebook" />
+                </a>
+                <a id="twitter" href="https://twitter.com/alltradeky" title="Alltrade on Twitter">
+                  <img src={twUrl} className="social-icon" alt="Facebook" />
+                </a>
+                <a id="youtube" href="https://www.youtube.com/watch?v=-ZLaEpU7nhw" title="Alltrade on YouTube">
+                  <img src={ytUrl} className="social-icon" alt="Youtube" />
+                </a>
+                <a
+                  id="linkedin"
+                  href="https://www.linkedin.com/company/alltrade-property-management/about/"
+                  title="Alltrade on LinkedIn"
+                >
+                  <img src={liUrl} className="social-icon" alt="Facebook" />
+                </a>
               </div>
             </Row>
           </Container>
