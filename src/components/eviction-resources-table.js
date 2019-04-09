@@ -33,17 +33,26 @@ class EvictionResourcesTable extends React.Component {
 
         <div className="eviction-resource-items card">
           {filteredResources.sort(byOrderProp).map((resource, idx) => (
-            <Row key={`resource-${idx}`} className="border-bottom resource-row">
-              <div className="col-md-4">
-                <a href={resource.url}>
-                  <div className="name">{resource.name}</div>
-                </a>
-              </div>
+            <div
+              className="border-bottom"
+              key={`resource-${idx}`}
+              style={{ padding: '10px', backgroundColor: idx % 2 === 1 ? '#eee' : 'transparent' }}
+            >
+              <Row className="resource-row">
+                <div className="col-md-6">
+                  <a href={resource.url}>
+                    <h4 className="name">{resource.name}</h4>
+                  </a>
+                </div>
 
-              <div className="col-md-2 phone">{resource.phone}</div>
-
-              <div className="col-md-6">{resource.description}</div>
-            </Row>
+                <div className="col-md-6 phone" style={{ textAlign: 'right' }}>
+                  <h4>{resource.phone}</h4>
+                </div>
+              </Row>
+              <Row>
+                <div className="col-md-12">{resource.description}</div>
+              </Row>
+            </div>
           ))}
         </div>
       </div>

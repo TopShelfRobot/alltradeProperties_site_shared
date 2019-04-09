@@ -6,12 +6,13 @@
     padding: 5px;
     cursor: pointer;
     border: 1px solid transparent;
+    font-weight: bold;
     
     &.active {
-      border: 1px solid #777;
+      border: 1px solid #000;
     }
     &:hover {
-      border: 1px solid #777;
+      border: 1px solid #ffd80d;
     }
   }
   .row {
