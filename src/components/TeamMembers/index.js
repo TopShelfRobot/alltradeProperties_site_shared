@@ -28,6 +28,7 @@ const TeamMembers = props => (
     query={teamQuery}
     render={data => {
       const teamMembers = data.allTeamMember.edges.map(edge => edge.node)
+      teamMembers.sort((a, b) => a.order - b.order)
       return (
         <Row className="team-members">
           {teamMembers.map(member => (
