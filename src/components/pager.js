@@ -12,27 +12,29 @@ function range(from, to) {
 }
 
 const Pager = ({ current, total = 1, onGoTo, ...props }) => (
-  <nav aria-label="Alltrade Listing Page Navigation" className="pager">
-    <ul className="pagination">
-      <li className={cn('page-item', { disabled: current <= 1 })}>
-        <button className="page-link" onClick={onGoTo(current - 1)}>
-          Previous
-        </button>
-      </li>
-      {range(1, total).map(page => (
-        <li key={`pager-${page}`} className={cn('page-item', { active: current === page })}>
-          <button className="page-link" onClick={onGoTo(page)}>
-            {page}
+  <div>
+    <nav aria-label="Alltrade Listing Page Navigation" className="pager">
+      <ul className="pagination">
+        <li className={cn('page-item', { disabled: current <= 1 })}>
+          <button className="page-link" onClick={onGoTo(current - 1)}>
+            Previous
           </button>
         </li>
-      ))}
-      <li className={cn('page-item', { disabled: current === total })}>
-        <button className="page-link" onClick={onGoTo(current + 1)}>
-          Next
-        </button>
-      </li>
-    </ul>
-  </nav>
+        {range(1, total).map(page => (
+          <li key={`pager-${page}`} className={cn('page-item d-none d-lg-block', { active: current === page })}>
+            <button className="page-link" onClick={onGoTo(page)}>
+              {page}
+            </button>
+          </li>
+        ))}
+        <li className={cn('page-item', { disabled: current === total })}>
+          <button className="page-link" onClick={onGoTo(current + 1)}>
+            Next
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 )
 
 export default Pager
