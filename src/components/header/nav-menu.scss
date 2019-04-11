@@ -32,13 +32,12 @@ $link-hover-color: $blue;
     text-decoration: none;
   }
 }
-
 nav.nav-menu {
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 1;
+    z-index: 2;
 
     li {
       float: left;
@@ -74,7 +73,7 @@ nav.nav-menu {
   .nav-dropdown {
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   }
 
