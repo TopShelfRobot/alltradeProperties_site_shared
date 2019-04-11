@@ -41,7 +41,7 @@ export default class ListingGallery extends React.Component {
         </div>
         <Row>
           {unitsDisplay.map((unit, idx) => (
-            <div key={`listing-${idx}`} className="col-4 mb-3">
+            <div key={`listing-${idx}`} className="col-lg-4 mb-3">
               <UnitListing unit={unit} isLoading={isLoading} />
             </div>
           ))}
