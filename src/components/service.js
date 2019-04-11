@@ -2,14 +2,6 @@ import React from 'react'
 import cn from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faExclamationTriangle as Warning,
-  faPhone as Phone,
-  faEnvelope as Envelope,
-  faBars as Bars,
-  faUser as User,
-  faUsers as Users,
-  faHome as House,
-  faCalendarAlt as Calendar,
   faFileSignature as Apply,
   faCreditCard as CreditCard,
   faWrench as Wrench,
