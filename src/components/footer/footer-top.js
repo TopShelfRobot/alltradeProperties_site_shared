@@ -49,7 +49,7 @@ const FooterTop = props => (
                   <div className="col-sm-4">
                     <img className="eho" src={ehoLogo} alt="Equal Housing Opportunity Logo" />
                   </div>
-                  <div className="col-sm-8">
+                  <div className="col-sm-8 main-address-box">
                     <MainAddress />
                   </div>
                 </Row>
