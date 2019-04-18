@@ -12,11 +12,11 @@ const HeaderTitle = ({ title, secondary, ...props }) => {
     <header className="header-title">
       <Container>
         <Row>
-          <div className="col-6">
+          <div className="col-lg-6">
             <h1> {title} </h1>
           </div>
 
-          <div className="col-6 secondary">{!!Secondary && <Secondary />}</div>
+          <div className="col-lg-6 secondary">{!!Secondary && <Secondary />}</div>
         </Row>
       </Container>
     </header>

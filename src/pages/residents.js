@@ -126,8 +126,13 @@ class ResidentsPage extends React.Component {
             </div>
           </Row>
 
-          <SectionTitle>Eviction Assistance Resources</SectionTitle>
-          <p>The resources below may be able to assist you if you are facing eviction.</p>
+          <SectionTitle>Eviction Prevention Assistance</SectionTitle>
+          <p class="mb-4">
+            Eviction Prevention programs offers a variety of support services to help get through financial difficulty
+            for people of all backgrounds, races, income and ages. Anyone who is having difficulty paying for rent or
+            utilities or have already received an eviction notice from your landlord is encouraged to immediately seek
+            help. It's not to late and the resources below can get you started.
+          </p>
           <StaticQuery
             query={evictionResourcesQuery}
             render={data => {

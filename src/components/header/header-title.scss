@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'config';
+
 .header-title {
   background-color: rgba(133, 133, 133, 0.2);
   line-height: 30px;
@@ -5,7 +8,12 @@
   .secondary {
     display: flex;
     align-items: center;
-    justify-content: flex-end
+    justify-content: center;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
   }
   h1 {
     font-size: 30px;
