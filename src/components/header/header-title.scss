@@ -5,6 +5,17 @@
   background-color: rgba(133, 133, 133, 0.2);
   line-height: 30px;
 
+  .primary {
+    justify-content: center;
+    text-align: center;
+    
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+      text-align: left;
+
+    }
+  }
+
   .secondary {
     display: flex;
     align-items: center;
@@ -18,7 +29,10 @@
   h1 {
     font-size: 30px;
     color: rgba(37, 36, 40, 1);
-    line-height: 72px;
+    line-height: 1.5;
+    @include media-breakpoint-up(lg) {
+      line-height: 72px;
+    }
   }
 
   h2 {

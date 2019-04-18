@@ -80,7 +80,7 @@ class SearchFormMain extends React.Component {
         </Row>
 
         <Row>
-          <div className="col-4">
+          <div className="col-lg-4">
             <Row>
               <div className="col-6 pad">
                 <select className="form-control" name="type" onChange={this.handleChange}>
@@ -134,7 +134,7 @@ class SearchFormMain extends React.Component {
               </div>
             </Row>
           </div>
-          <div className="col-4">
+          <div className="col-lg-4">
             <Row>
               <div className="col-12 pad">
                 <SliderInput value={form.beds} unit="beds" onChange={this.handleBedsChange} iconUrl={bedsUrl} />
@@ -146,7 +146,7 @@ class SearchFormMain extends React.Component {
               </div>
             </Row>
           </div>
-          <div className="col-4 pad">
+          <div className="col-lg-4 pad">
             <Row>
               <div className="col-6">
                 <label htmlFor="section8">
