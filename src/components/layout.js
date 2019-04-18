@@ -50,9 +50,7 @@ const Layout = ({ children, ...props }) => (
             email={email}
             menu={data.site.siteMetadata.menu}
             pageTitle={props.pageTitle}
-            secondaryPageTitle={
-              props.secondaryPageTitle !== false ? props.secondaryPageTitle || (() => <ApplyCTAButton />) : null
-            }
+            secondaryPageTitle={props.secondaryPageTitle !== false ? props.secondaryPageTitle : null}
           />
           <div>{children}</div>
           <ToastContainer />

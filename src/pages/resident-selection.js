@@ -49,12 +49,6 @@ export default class ResidentSelectionPage extends React.Component {
               discrimination has occurred or is going to occur, please report to Alltrade management immediately.
             </p>
 
-            <div style={{ margin: '1em 0', textAlign: 'center' }}>
-              <CTAButton href="https://alltrade.twa.rentmanager.com/applynow">
-                Start your rental application now
-              </CTAButton>
-            </div>
-
             <h2>APPLICATION PROCESS:</h2>
 
             <h3>Fees:</h3>
@@ -344,12 +338,6 @@ export default class ResidentSelectionPage extends React.Component {
               national origin, handicap, disability or sexual orientation. If anyone believes that an act of
               discrimination has occurred or is going to occur, please report to Alltrade management immediately.
             </p>
-
-            <div style={{ margin: '1em 0', textAlign: 'center' }}>
-              <CTAButton href="https://alltrade.twa.rentmanager.com/applynow">
-                Start your rental application now
-              </CTAButton>
-            </div>
 
             <h2>APPLICATION PROCESS:</h2>
 
