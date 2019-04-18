@@ -11,6 +11,7 @@ import fbUrl from '../../images/icons/fb.png'
 import ytUrl from '../../images/icons/yt.png'
 import twUrl from '../../images/icons/tw.png'
 import liUrl from '../../images/icons/li.png'
+import igUrl from '../../images/icons/ig.png'
 
 import './footer-top.scss'
 
@@ -70,6 +71,9 @@ const FooterTop = props => (
                   title="Alltrade on LinkedIn"
                 >
                   <img src={liUrl} className="social-icon" alt="Facebook" />
+                </a>
+                <a id="instagram" href="https://www.instagram.com/alltradeproperties/" title="Alltrade on Instagram">
+                  <img src={igUrl} className="social-icon" alt="Instagram" />
                 </a>
               </div>
             </Row>

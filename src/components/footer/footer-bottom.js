@@ -3,6 +3,7 @@ import React from 'react'
 import Container from '../container'
 import Row from '../row'
 import './footer-bottom.scss'
+import { TwitterIcon, FacebookIcon, YoutubeIcon, InstagramIcon, LinkedInIcon } from '../icons'
 
 const currentYear = new Date().getFullYear()
 
@@ -24,17 +25,17 @@ const FooterBottom = props => (
           <ul className="social">
             <li>
               <a id="facebook" href="https://www.facebook.com/alltradeproperties" title="Alltrade on Facebook">
-                f
+                <FacebookIcon />
               </a>
             </li>
             <li>
               <a id="twitter" href="https://twitter.com/alltradeky" title="Alltrade on Twitter">
-                t
+                <TwitterIcon />
               </a>
             </li>
             <li>
               <a id="youtube" href="https://www.youtube.com/watch?v=-ZLaEpU7nhw" title="Alltrade on YouTube">
-                y
+                <YoutubeIcon />
               </a>
             </li>
             <li>
@@ -43,7 +44,12 @@ const FooterBottom = props => (
                 href="https://www.linkedin.com/company/alltrade-property-management/about/"
                 title="Alltrade on LinkedIn"
               >
-                l
+                <LinkedInIcon />
+              </a>
+            </li>
+            <li>
+              <a id="instagram" href="https://www.instagram.com/alltradeproperties/" title="Alltrade on Instagram">
+                <InstagramIcon />
               </a>
             </li>
           </ul>
