@@ -7,13 +7,15 @@ import Container from '../components/container'
 import Row from '../components/row'
 import PropertyContact from '../components/property-contact'
 import GuestCardContactForm from '../components/guest-card'
-import { ApplyNowButton } from '../components/buttons'
 import UnitDetailTitle from '../components/unit-detail-title'
 import UnitDetailAvailable from '../components/unit-detail-available'
 import UnitDetail from '../components/unit-detail'
+import Service from '../components/service'
 // import Gallery from '../components/Gallery'
 
 import { getQueryFromLocation, getDefaultForm } from '../lib/query'
+
+const applyNowUrl = process.env.GATSBY_APPLY_NOW_URL
 
 class DetailPage extends React.Component {
   constructor(props) {
@@ -77,7 +79,7 @@ class DetailPage extends React.Component {
                   PropertyID={unit.PropertyID}
                 />
               )}
-              <ApplyNowButton UnitID={unit.UnitID} />
+              <Service href={`${applyNowUrl}?UnitID=${unit.UnitID}`} title="Apply Now" icon="apply" border />
             </aside>
 
             <section className="col-12 col-sm-8 order-first mb-3">
