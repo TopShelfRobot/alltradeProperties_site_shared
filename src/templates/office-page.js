@@ -12,9 +12,13 @@ import { CTAButton } from '../components/buttons'
 import FeaturedUnitGallery from '../components/featured-unit-gallery'
 import ListingGallery from '../components/listing-gallery'
 import SearchFormListing from '../components/search-form-listing'
+import Service from '../components/service'
 
 import defaultHeroImage from '../images/main_bg.jpg'
 import './office-page.scss'
+
+const applyNowUrl = process.env.GATSBY_APPLY_NOW_URL
+const payOnlineUrl = process.env.GATSBY_PAY_ONLINE_URL
 
 export default class OfficeSubPage extends React.Component {
   constructor(props) {
@@ -91,16 +95,21 @@ export default class OfficeSubPage extends React.Component {
         </Hero>
 
         <Container>
-          <Row className="mt-5">
-            <div className="col-6">
-              <h3>Featured Properties</h3>
+          <Row className="my-5">
+            <div className="col-md-4 mb-3">
+              <Service href={applyNowUrl} title="Apply Now" icon="apply" border />
             </div>
-            <div className="col-6">
-              <span className="float-right">
-                <CTAButton href="https://alltrade.twa.rentmanager.com/applynow">
-                  Start your rental application now
-                </CTAButton>
-              </span>
+            <div className="col-md-4 mb-3">
+              <Service href={payOnlineUrl} title="Pay Online" icon="credit" border />
+            </div>
+            <div className="col-md-4 mb-3">
+              <Service href="/residents" title="Report Service Issue" icon="wrench" border />
+            </div>
+          </Row>
+
+          <Row className="mt-5">
+            <div className="col-12">
+              <h3>Featured Properties</h3>
             </div>
           </Row>
 

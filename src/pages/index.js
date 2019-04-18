@@ -55,13 +55,13 @@ class IndexPage extends React.Component {
         </Hero>
         <Container>
           <Row className="my-5">
-            <div className="col-md-4">
+            <div className="col-md-4 mb-3">
               <Service href={applyNowUrl} title="Apply Now" icon="apply" border />
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-3">
               <Service href={payOnlineUrl} title="Pay Online" icon="credit" border />
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-3">
               <Service href="/residents" title="Report Service Issue" icon="wrench" border />
             </div>
           </Row>
