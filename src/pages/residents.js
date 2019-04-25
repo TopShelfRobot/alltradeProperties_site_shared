@@ -122,7 +122,7 @@ class ResidentsPage extends React.Component {
                 using the form below!
               </p>
 
-              <ContactForm />
+              <ContactForm title="Submit a Maintenance Request" />
             </div>
           </Row>
 

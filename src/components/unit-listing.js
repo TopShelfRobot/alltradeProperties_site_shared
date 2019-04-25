@@ -17,7 +17,7 @@ const UnitListing = ({ unit, isLoading, ...props }) => {
       </div>
       <div className="tools">
         <p className="price">
-          ${unit.rent} / {unit.Bedrooms}BR / {unit.Bathrooms}BA
+          ${unit.rent} | {unit.Bedrooms}BR/{unit.Bathrooms}BA
         </p>
         <a href={`/detail?UnitID=${unit.unitID}`} className="button" target="_blank" rel="noopener noreferrer">
           See more

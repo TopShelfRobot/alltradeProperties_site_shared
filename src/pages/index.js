@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
 
           <div className="row my-5">
             <h3 className="col-12 text-xs-center my-5">Our Services</h3>
-            <div className="col-sm-4">
+            <div className="col-sm-4 mb-3">
               <Service
                 href="/listing"
                 title="Leasing"
@@ -83,7 +83,7 @@ class IndexPage extends React.Component {
                 content={<Snippet group="services" snippet="leasing_service" />}
               />
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 mb-3">
               <Service
                 href="/listing"
                 title="Client Services"
@@ -91,7 +91,7 @@ class IndexPage extends React.Component {
                 content={<Snippet group="services" snippet="client_service" />}
               />
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 mb-3">
               <Service
                 href="/listing"
                 title="Construction &amp; Maintenance"
