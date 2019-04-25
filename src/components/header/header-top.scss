@@ -6,6 +6,11 @@
   color: $yellow;
   border-bottom: 5px solid $blue;
   padding: 10px 0;
+  flex-direction: column-reverse;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row
+  }
 
   .left-box {
     flex-grow: 1;

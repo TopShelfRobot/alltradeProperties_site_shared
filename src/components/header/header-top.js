@@ -28,8 +28,8 @@ const TopHeader = props => (
         <RightBox>
           <PhoneIcon />
           <PhoneNumber>{props.phone}</PhoneNumber>
-        </RightBox>
-        <RightBox>
+          {/* </RightBox>
+        <RightBox> */}
           <EmailIcon />
           <EmailAddress>{props.email}</EmailAddress>
         </RightBox>
