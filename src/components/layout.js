@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ToastContainer } from 'react-toastify'
+import ContactForm from './contact-form'
 
 import Header from './header'
 import Footer from './footer'
 import ApplyCTAButton from './buttons/apply-cta-button'
+import Modal, { ModalRoot } from './modal'
 
 import '../styles/main.scss'
 import 'react-toastify/dist/ReactToastify.css'
@@ -37,7 +39,11 @@ const Layout = ({ children, ...props }) => (
       const email = props.email || data.site.siteMetadata.email
 
       return (
-        <>
+        <ModalRoot>
+          <Modal name="maintenance-request">
+            <ContactForm title="Submit a Maintenance Request" />
+          </Modal>
+
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
@@ -55,7 +61,7 @@ const Layout = ({ children, ...props }) => (
           <div>{children}</div>
           <ToastContainer />
           <Footer menu={data.site.siteMetadata.menu} />
-        </>
+        </ModalRoot>
       )
     }}
   />

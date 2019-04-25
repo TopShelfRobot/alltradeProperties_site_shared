@@ -3,7 +3,6 @@ import cn from 'classnames'
 
 import Layout from '../components/layout'
 import Container from '../components/container'
-import { CTAButton } from '../components/buttons'
 
 import './resident-selection.scss'
 

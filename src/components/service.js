@@ -52,20 +52,21 @@ const ServiceIconImage = props => {
 }
 
 const Service = props => {
-  const Root = props.href ? p => <a {...p} /> : p => <div {...p} />
+  const { title, subtitle, content, image, icon, border, ...serviceProps } = props
+  const Root = serviceProps.href ? p => <a {...p} /> : p => <div {...p} />
 
   return (
-    <Root className={cn('service-offering', { bordered: props.border })} href={props.href}>
+    <Root className={cn('service-offering', { bordered: border })} {...serviceProps}>
       <div>
         <div className="service-icon">
-          <ServiceIconImage image={props.image} icon={props.icon} />
+          <ServiceIconImage image={image} icon={icon} />
         </div>
       </div>
 
       <div className="service-content-box">
-        {props.title && <h2>{props.title}</h2>}
-        {props.subtitle && <h4>{props.subtitle}</h4>}
-        {props.content && <p>{props.content}</p>}
+        {title && <h2>{title}</h2>}
+        {subtitle && <h4>{subtitle}</h4>}
+        {content && <p>{content}</p>}
       </div>
     </Root>
   )
