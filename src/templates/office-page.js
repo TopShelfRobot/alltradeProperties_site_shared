@@ -16,6 +16,8 @@ import Service from '../components/service'
 import defaultHeroImage from '../images/main_bg.jpg'
 import './office-page.scss'
 
+import Modal from '../components/modal'
+
 const applyNowUrl = process.env.GATSBY_APPLY_NOW_URL
 const payOnlineUrl = process.env.GATSBY_PAY_ONLINE_URL
 
@@ -102,7 +104,12 @@ export default class OfficeSubPage extends React.Component {
               <Service href={payOnlineUrl} title="Pay Online" icon="credit" border />
             </div>
             <div className="col-md-4 mb-3">
-              <Service href="/residents" title="Report Service Issue" icon="wrench" border />
+              <Service
+                onClick={() => Modal.show('maintenance-request')}
+                title="Report Service Issue"
+                icon="wrench"
+                border
+              />
             </div>
           </Row>
 

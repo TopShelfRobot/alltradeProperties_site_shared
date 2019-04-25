@@ -54,6 +54,10 @@ const ServiceIconImage = props => {
 const Service = props => {
   const { title, subtitle, content, image, icon, border, ...serviceProps } = props
   const Root = serviceProps.href ? p => <a {...p} /> : p => <div {...p} />
+  if (serviceProps.href) {
+    serviceProps.target = '_blank'
+    serviceProps.rel = 'noopener noreferrer'
+  }
 
   return (
     <Root className={cn('service-offering', { bordered: border })} {...serviceProps}>
