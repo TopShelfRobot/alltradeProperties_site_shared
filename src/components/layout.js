@@ -7,7 +7,6 @@ import ContactForm from './contact-form'
 
 import Header from './header'
 import Footer from './footer'
-import ApplyCTAButton from './buttons/apply-cta-button'
 import Modal, { ModalRoot } from './modal'
 
 import '../styles/main.scss'
