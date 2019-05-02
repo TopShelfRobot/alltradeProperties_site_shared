@@ -56,23 +56,49 @@ const FooterTop = props => (
                 </Row>
               </div>
               <div className="social-box">
-                <a id="facebook" href="https://www.facebook.com/alltradeproperties" title="Alltrade on Facebook">
+                <a
+                  id="facebook"
+                  href="https://www.facebook.com/alltradeproperties"
+                  title="Alltrade on Facebook"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <img src={fbUrl} className="social-icon" alt="Facebook" />
                 </a>
-                <a id="twitter" href="https://twitter.com/alltradeky" title="Alltrade on Twitter">
+                <a
+                  id="twitter"
+                  href="https://twitter.com/alltradeky"
+                  title="Alltrade on Twitter"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <img src={twUrl} className="social-icon" alt="Facebook" />
                 </a>
-                <a id="youtube" href="https://www.youtube.com/watch?v=-ZLaEpU7nhw" title="Alltrade on YouTube">
+                <a
+                  id="youtube"
+                  href="https://www.youtube.com/watch?v=-ZLaEpU7nhw"
+                  title="Alltrade on YouTube"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <img src={ytUrl} className="social-icon" alt="Youtube" />
                 </a>
                 <a
                   id="linkedin"
                   href="https://www.linkedin.com/company/alltrade-property-management/about/"
                   title="Alltrade on LinkedIn"
+                  target="_blank"
+                  rel="noopener"
                 >
                   <img src={liUrl} className="social-icon" alt="Facebook" />
                 </a>
-                <a id="instagram" href="https://www.instagram.com/alltradeproperties/" title="Alltrade on Instagram">
+                <a
+                  id="instagram"
+                  href="https://www.instagram.com/alltradeproperties/"
+                  title="Alltrade on Instagram"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <img src={igUrl} className="social-icon" alt="Instagram" />
                 </a>
               </div>

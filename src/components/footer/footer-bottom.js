@@ -24,17 +24,35 @@ const FooterBottom = props => (
         <div className="col-sm-8 copyright">
           <ul className="social">
             <li>
-              <a id="facebook" href="https://www.facebook.com/alltradeproperties" title="Alltrade on Facebook">
+              <a
+                id="facebook"
+                href="https://www.facebook.com/alltradeproperties"
+                title="Alltrade on Facebook"
+                target="_blank"
+                rel="noopener"
+              >
                 <FacebookIcon />
               </a>
             </li>
             <li>
-              <a id="twitter" href="https://twitter.com/alltradeky" title="Alltrade on Twitter">
+              <a
+                id="twitter"
+                href="https://twitter.com/alltradeky"
+                title="Alltrade on Twitter"
+                target="_blank"
+                rel="noopener"
+              >
                 <TwitterIcon />
               </a>
             </li>
             <li>
-              <a id="youtube" href="https://www.youtube.com/watch?v=-ZLaEpU7nhw" title="Alltrade on YouTube">
+              <a
+                id="youtube"
+                href="https://www.youtube.com/watch?v=-ZLaEpU7nhw"
+                title="Alltrade on YouTube"
+                target="_blank"
+                rel="noopener"
+              >
                 <YoutubeIcon />
               </a>
             </li>
@@ -43,12 +61,20 @@ const FooterBottom = props => (
                 id="linkedin"
                 href="https://www.linkedin.com/company/alltrade-property-management/about/"
                 title="Alltrade on LinkedIn"
+                target="_blank"
+                rel="noopener"
               >
                 <LinkedInIcon />
               </a>
             </li>
             <li>
-              <a id="instagram" href="https://www.instagram.com/alltradeproperties/" title="Alltrade on Instagram">
+              <a
+                id="instagram"
+                href="https://www.instagram.com/alltradeproperties/"
+                title="Alltrade on Instagram"
+                target="_blank"
+                rel="noopener"
+              >
                 <InstagramIcon />
               </a>
             </li>
