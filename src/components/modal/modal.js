@@ -14,6 +14,7 @@ export default class Modal extends React.Component {
     return (
       <ModalConsumer>
         {({ modalName, onClose }) => {
+          const showModal = modalName === this.props.name
           const children = React.Children.map(this.props.children, child => {
             return React.cloneElement(child, { onClose })
           })
@@ -23,9 +24,8 @@ export default class Modal extends React.Component {
             e.target === this.background && onClose()
           }
 
-          bodyScrollLock.disableBodyScroll(this.content)
-
-          const visibilityStyle = modalName === this.props.name ? styles.visible : styles.hidden
+          if (showModal) bodyScrollLock.disableBodyScroll(this.content)
+          const visibilityStyle = showModal ? styles.visible : styles.hidden
           const backdropStyle = {
             ...styles.backdrop,
             ...visibilityStyle,
