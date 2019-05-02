@@ -88,11 +88,11 @@ class Layout extends React.Component {
           meta={[
             { name: 'description', content: description },
             { name: 'keywords', content: keywords },
-            { name: 'og:url', content: url },
-            { name: 'og:type', content: 'article' },
-            { name: 'og:title', content: title },
-            { name: 'og:description', content: description },
-            { name: 'og:image', content: logoOg },
+            { property: 'og:url', content: url },
+            { property: 'og:type', content: 'article' },
+            { property: 'og:title', content: title },
+            { property: 'og:description', content: description },
+            { property: 'og:image', content: logoOg },
           ]}
         >
           <html lang="en" />
