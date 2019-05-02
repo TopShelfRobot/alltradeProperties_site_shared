@@ -4,10 +4,6 @@ import * as bodyScrollLock from 'body-scroll-lock'
 
 import { ModalConsumer } from './context'
 
-const SingleChildContainer = props => {
-  return Children.only(props.children)
-}
-
 export default class Modal extends React.Component {
   static rootInstance
   static show(modalName) {
@@ -18,8 +14,6 @@ export default class Modal extends React.Component {
     return (
       <ModalConsumer>
         {({ modalName, onClose }) => {
-          if (modalName !== this.props.name) return null
-
           const children = React.Children.map(this.props.children, child => {
             return React.cloneElement(child, { onClose })
           })
@@ -31,9 +25,19 @@ export default class Modal extends React.Component {
 
           bodyScrollLock.disableBodyScroll(this.content)
 
+          const visibilityStyle = modalName === this.props.name ? styles.visible : styles.hidden
+          const backdropStyle = {
+            ...styles.backdrop,
+            ...visibilityStyle,
+          }
+          const contentStyle = {
+            ...styles.content,
+            ...visibilityStyle,
+          }
+
           return (
-            <div style={styles.backdrop} onClick={handleBackgroundClick} ref={el => (this.background = el)}>
-              <div style={styles.content} ref={el => (this.content = el)}>
+            <div style={backdropStyle} onClick={handleBackgroundClick} ref={el => (this.background = el)}>
+              <div style={contentStyle} ref={el => (this.content = el)}>
                 {children}
               </div>
             </div>
@@ -52,6 +56,7 @@ const styles = {
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    transition: '.25s ease-in',
     zIndex: 10,
     display: 'flex',
     alignItems: 'center',
@@ -60,8 +65,17 @@ const styles = {
   content: {
     backgroundColor: 'white',
     margin: '3em',
+    transition: '.25s ease-in',
     maxHeight: '100%',
     overflowY: 'auto',
+  },
+  hidden: {
+    opacity: 0,
+    visibility: 'hidden',
+  },
+  visible: {
+    opacity: 1,
+    visibility: 'visible',
   },
 }
 
