@@ -5,6 +5,10 @@ import FadeBottom from './FadeBottom'
 
 import './featured-unit.scss'
 
+function bedBathText(unit) {
+  return unit.UnitType && unit.UnitType.Name === 'Studio' ? 'Studio' : `${unit.Bedrooms}BR/${unit.Bathrooms}BA`
+}
+
 const FeaturedUnit = ({ unit, ...props }) => (
   <article className="featured-unit">
     {unit.moveInSpecial ? (
@@ -26,7 +30,7 @@ const FeaturedUnit = ({ unit, ...props }) => (
     </div>
     <div className="tools">
       <p className="price">
-        ${unit.rent} | {unit.Bedrooms}BR/{unit.Bathrooms}BA
+        ${unit.rent} | {bedBathText(unit)}
       </p>
       <a href={`/detail?UnitID=${unit.unitID}`} className="button">
         See more

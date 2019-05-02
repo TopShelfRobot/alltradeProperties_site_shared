@@ -4,6 +4,10 @@ import FadeBottom from './FadeBottom'
 
 import './unit-listing.scss'
 
+function bedBathText(unit) {
+  return unit.UnitType && unit.UnitType.Name === 'Studio' ? 'Studio' : `${unit.Bedrooms}BR/${unit.Bathrooms}BA`
+}
+
 const UnitListing = ({ unit, isLoading, ...props }) => {
   const description = unit.unitDesc || unit.Comment || ''
   return (
@@ -17,7 +21,7 @@ const UnitListing = ({ unit, isLoading, ...props }) => {
       </div>
       <div className="tools">
         <p className="price">
-          ${unit.rent} | {unit.Bedrooms}BR/{unit.Bathrooms}BA
+          ${unit.rent} | {bedBathText(unit)}
         </p>
         <a href={`/detail?UnitID=${unit.unitID}`} className="button" target="_blank" rel="noopener noreferrer">
           See more
@@ -26,23 +30,4 @@ const UnitListing = ({ unit, isLoading, ...props }) => {
     </article>
   )
 }
-// const UnitListing = ({ unit, isLoading, ...props }) => {
-//   const description = unit.unitDesc || unit.Comment || ''
-//   return (
-//     <article className="unit-listing">
-//       <UnitImage url={`/detail?UnitID=${unit.unitID}`} imgUrl={`url(${unit.imgUrl})`} isLoading={isLoading} />
-//       <div className="description">
-//         {unit.title && <h6>{isLoading ? <Skeleton /> : unit.title}</h6>}
-//         <h6>{isLoading ? <Skeleton count={2} /> : unit.fullAddress}</h6>
-//         <p>{isLoading ? <Skeleton count={4} /> : description.slice(0, 50)}</p>
-//       </div>
-//       <div className="tools">
-//         <p className="price">${unit.rent}</p>
-//         <a href={`/detail?UnitID=${unit.unitID}`} className="button" target="_blank" rel="noopener noreferrer">
-//           See more
-//         </a>
-//       </div>
-//     </article>
-//   )
-// }
 export default UnitListing
