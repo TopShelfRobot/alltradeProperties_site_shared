@@ -13,62 +13,121 @@ import Modal, { ModalRoot } from './modal'
 import '../styles/main.scss'
 import 'react-toastify/dist/ReactToastify.css'
 
-const Layout = ({ children, ...props }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            phone
-            email
-            menu {
-              label
-              url
-              sub {
-                label
-                url
-              }
-            }
+const detailsQuery = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+        phone
+        email
+        description
+        keywords
+        siteUrl
+        logoOg
+        menu {
+          label
+          url
+          sub {
+            label
+            url
           }
         }
       }
-    `}
-    render={data => {
-      const phone = props.phone || data.site.siteMetadata.phone
-      const email = props.email || data.site.siteMetadata.email
+    }
+  }
+`
+class Layout extends React.Component {
+  getTitle() {
+    const { siteMetadata, title } = this.props
+    return title || siteMetadata.title
+  }
 
-      return (
-        <ModalRoot>
-          <Modal name="maintenance-request">
-            <ContactForm title="Submit a Maintenance Request" />
-          </Modal>
+  getPhone() {
+    return this.props.phone || this.props.siteMetadata.phone
+  }
 
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
-          >
-            <html lang="en" />
-          </Helmet>
-          <Header
-            siteTitle={data.site.siteMetadata.title}
-            phone={phone}
-            email={email}
-            menu={data.site.siteMetadata.menu}
-            pageTitle={props.pageTitle}
-            secondaryPageTitle={props.secondaryPageTitle !== false ? props.secondaryPageTitle : null}
-          />
-          <div>{children}</div>
-          <ToastContainer />
-          <Footer menu={data.site.siteMetadata.menu} />
-        </ModalRoot>
-      )
-    }}
-  />
-)
+  getEmail() {
+    return this.props.email || this.props.siteMetadata.email
+  }
+
+  getDescription() {
+    const { siteMetadata, description } = this.props
+    return description || siteMetadata.description
+  }
+  getKeywords() {
+    const { siteMetadata, keywords } = this.props
+    return keywords || siteMetadata.keywords
+  }
+
+  getUrl() {
+    const { slug, siteMetadata } = this.props
+    if (slug) {
+      return `https://alltradeproperties.com${slug}`
+    } else {
+      return siteMetadata.siteUrl
+    }
+  }
+
+  render() {
+    const phone = this.getPhone()
+    const email = this.getEmail()
+    const title = this.getTitle()
+    const description = this.getDescription()
+    const keywords = this.getKeywords()
+    const url = this.getUrl()
+    const logoOg = this.props.siteMetadata.logoOg
+
+    return (
+      <ModalRoot>
+        <Modal name="maintenance-request">
+          <ContactForm title="Submit a Maintenance Request" />
+        </Modal>
+
+        <Helmet
+          title={title}
+          meta={[
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords },
+            { name: 'og:url', content: url },
+            { name: 'og:type', content: 'article' },
+            { name: 'og:title', content: title },
+            { name: 'og:description', content: description },
+            { name: 'og:image', content: logoOg },
+          ]}
+        >
+          <html lang="en" />
+        </Helmet>
+        <Header
+          siteTitle={title}
+          phone={phone}
+          email={email}
+          menu={this.props.siteMetadata.menu}
+          pageTitle={this.props.pageTitle}
+          secondaryPageTitle={this.props.secondaryPageTitle !== false ? this.props.secondaryPageTitle : null}
+        />
+        <div>{this.props.children}</div>
+        <ToastContainer />
+        <Footer menu={this.props.siteMetadata.menu} />
+      </ModalRoot>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+class LayoutWrapper extends React.Component {
+  render() {
+    return (
+      <StaticQuery
+        query={detailsQuery}
+        render={data => {
+          return <Layout {...this.props} siteMetadata={data.site.siteMetadata} />
+        }}
+      />
+    )
+  }
+}
+
+export default LayoutWrapper

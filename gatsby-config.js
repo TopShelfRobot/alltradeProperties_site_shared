@@ -6,6 +6,10 @@ module.exports = {
     title: 'Alltrade Property Management',
     phone: '(502) 562-1985',
     email: 'info@alltradeproperties.com',
+    description:  'Managing single family, multifamily, and commercial spaces',
+    keywords: 'Apartments, houses, commercial rentals, Kentucky, Louisville, Southern Indiana, Lexington',
+    siteUrl: 'https://alltradeproperties.com',
+    logoOg: 'https://alltradeproperties.com/logo_og.png',
     menu: [
         {
           label: "Home",

@@ -29,7 +29,7 @@ const FooterBottom = props => (
                 href="https://www.facebook.com/alltradeproperties"
                 title="Alltrade on Facebook"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FacebookIcon />
               </a>
@@ -40,7 +40,7 @@ const FooterBottom = props => (
                 href="https://twitter.com/alltradeky"
                 title="Alltrade on Twitter"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <TwitterIcon />
               </a>
@@ -51,7 +51,7 @@ const FooterBottom = props => (
                 href="https://www.youtube.com/watch?v=-ZLaEpU7nhw"
                 title="Alltrade on YouTube"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <YoutubeIcon />
               </a>
@@ -62,7 +62,7 @@ const FooterBottom = props => (
                 href="https://www.linkedin.com/company/alltrade-property-management/about/"
                 title="Alltrade on LinkedIn"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <LinkedInIcon />
               </a>
@@ -73,7 +73,7 @@ const FooterBottom = props => (
                 href="https://www.instagram.com/alltradeproperties/"
                 title="Alltrade on Instagram"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <InstagramIcon />
               </a>

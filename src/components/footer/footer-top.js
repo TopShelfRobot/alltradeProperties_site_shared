@@ -61,7 +61,7 @@ const FooterTop = props => (
                   href="https://www.facebook.com/alltradeproperties"
                   title="Alltrade on Facebook"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <img src={fbUrl} className="social-icon" alt="Facebook" />
                 </a>
@@ -70,7 +70,7 @@ const FooterTop = props => (
                   href="https://twitter.com/alltradeky"
                   title="Alltrade on Twitter"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <img src={twUrl} className="social-icon" alt="Facebook" />
                 </a>
@@ -79,7 +79,7 @@ const FooterTop = props => (
                   href="https://www.youtube.com/watch?v=-ZLaEpU7nhw"
                   title="Alltrade on YouTube"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <img src={ytUrl} className="social-icon" alt="Youtube" />
                 </a>
@@ -88,7 +88,7 @@ const FooterTop = props => (
                   href="https://www.linkedin.com/company/alltrade-property-management/about/"
                   title="Alltrade on LinkedIn"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <img src={liUrl} className="social-icon" alt="Facebook" />
                 </a>
@@ -97,7 +97,7 @@ const FooterTop = props => (
                   href="https://www.instagram.com/alltradeproperties/"
                   title="Alltrade on Instagram"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <img src={igUrl} className="social-icon" alt="Instagram" />
                 </a>
