@@ -10,6 +10,9 @@ import {
   faHome as House,
   faCalendarAlt as Calendar,
   faWrench as Wrench,
+  faEye as Eye,
+  faFilePdf as Pdf,
+  faFileDownload as Download,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -39,3 +42,5 @@ export const FacebookIcon = props => <FontAwesomeIcon icon={Facebook} style={{ h
 export const YoutubeIcon = props => <FontAwesomeIcon icon={Youtube} style={{ height: '1em' }} {...props} />
 export const InstagramIcon = props => <FontAwesomeIcon icon={Instagram} style={{ height: '1em' }} {...props} />
 export const LinkedInIcon = props => <FontAwesomeIcon icon={LinkedIn} style={{ height: '1em' }} {...props} />
+export const PdfIcon = props => <FontAwesomeIcon icon={Pdf} style={{ height: '1em' }} {...props} />
+export const DownloadIcon = props => <FontAwesomeIcon icon={Download} style={{ height: '1em' }} {...props} />

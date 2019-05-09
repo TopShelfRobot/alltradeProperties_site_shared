@@ -10,6 +10,7 @@ import { YellowButton } from '../components/buttons'
 import ContactForm from '../components/contact-form'
 import SectionTitle from '../components/section-title'
 import Snippet from '../components/snippet'
+import TenantResourceTable from '../components/tenant-resource-table'
 import EvictionResourcesTable from '../components/eviction-resources-table'
 
 const payOnlineUrl = process.env.GATSBY_PAY_ONLINE_URL
@@ -140,6 +141,9 @@ class ResidentsPage extends React.Component {
               return <EvictionResourcesTable resources={resources} />
             }}
           />
+
+          <SectionTitle>Tenant Resources</SectionTitle>
+          <TenantResourceTable />
         </Container>
       </Layout>
     )
