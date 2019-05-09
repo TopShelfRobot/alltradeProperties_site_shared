@@ -85,7 +85,7 @@ const offices = [
     address: ['5438 New Cut Rd #204', 'Louisville, KY 40214'],
     phone: '502-337-3710',
     managerTitle: 'Regional Manager',
-    manangerName: 'Kim Carte',
+    managerName: 'Beth Johnson',
   },
 ]
 
