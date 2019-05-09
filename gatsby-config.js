@@ -6,8 +6,8 @@ module.exports = {
     title: 'Alltrade Property Management',
     phone: '(502) 562-1985',
     email: 'info@alltradeproperties.com',
-    description:  'Managing single family, multifamily, and commercial spaces',
-    keywords: 'Apartments, houses, commercial rentals, Kentucky, Louisville, Southern Indiana, Lexington',
+    description:  'A property management company based in Louisville, Kentucky. We managing single family, multifamily, and commercial spaces in Louisville, Lexington, Somerset, Durhan NC, and Southern Indiana',
+    keywords: 'Property manamgement, Apartments, houses, commercial rentals, Kentucky, Louisville, Southern Indiana, Lexington, Durham',
     siteUrl: 'https://alltradeproperties.com',
     logoOg: 'https://alltradeproperties.com/logo_og.png',
     menu: [
@@ -44,6 +44,8 @@ module.exports = {
       ]
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: 'gatsby-plugin-sass',
       options: {
