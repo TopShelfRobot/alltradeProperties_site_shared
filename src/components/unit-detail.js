@@ -32,8 +32,8 @@ const UnitDetail = ({ unit, loading, ...props }) => {
     <div className="unit-detail add-bottom-2 lighted">
       <Gallery images={images} loading={loading} preserveMainAspectRatio />
 
-      <div className="unit-detail-content px-3 mt-3">
-        <Row className="">
+      <div className="unit-detail-content px-3 mt-5">
+        <Row className="mb-5">
           <div className="col-sm-4">
             <Service image="rent" title="Rent" subtitle={`$${unit.rent}`} />
           </div>
