@@ -62,7 +62,7 @@ const TenantResourceRow = ({ resource, style = {}, ...props }) => {
         <div className="col-md-11">
           <Row>
             <div className="col-md-12">
-              <h5 style={{ fontWeight: 'bold' }}>{resource.title}</h5>
+              <h4 style={{ fontWeight: 'bold' }}>{resource.title}</h4>
             </div>
             <div className="col-md-12">{resource.description}</div>
           </Row>
