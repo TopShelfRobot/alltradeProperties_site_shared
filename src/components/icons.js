@@ -10,7 +10,7 @@ import {
   faHome as House,
   faCalendarAlt as Calendar,
   faWrench as Wrench,
-  faEye as Eye,
+  // faEye as Eye,
   faFilePdf as Pdf,
   faFileDownload as Download,
 } from '@fortawesome/free-solid-svg-icons'

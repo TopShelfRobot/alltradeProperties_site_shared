@@ -14,7 +14,9 @@ module.exports = {
         {
           label: "Home",
           url: '/',
-          
+          sub: [
+            {label: "Second Chance Leasing Program", url: "https://forms.gle/FzS6Hjcz43c578kN6"}
+          ]
         },
         {
           label: "Listings",

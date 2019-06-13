@@ -1,6 +1,12 @@
 .service-offering {
   display: flex;
 
+  color: rgb(68, 68, 68);
+  &:visited, &:hover {
+    color: rgb(68, 68, 68) !important;
+  }
+  
+
   * {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
