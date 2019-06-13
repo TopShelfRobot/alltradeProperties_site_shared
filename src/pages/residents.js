@@ -142,7 +142,7 @@ class ResidentsPage extends React.Component {
             }}
           />
 
-          <SectionTitle>Tenant Resources</SectionTitle>
+          <SectionTitle>Resident Resources</SectionTitle>
           <TenantResourceTable />
         </Container>
       </Layout>
