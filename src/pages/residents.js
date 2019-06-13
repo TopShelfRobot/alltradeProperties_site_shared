@@ -127,7 +127,9 @@ class ResidentsPage extends React.Component {
             </div>
           </Row>
 
-          <SectionTitle>Eviction Prevention Assistance</SectionTitle>
+          <SectionTitle>
+            <a name="eviction-resources">Eviction Prevention Assistance</a>
+          </SectionTitle>
           <p class="mb-4">
             Eviction Prevention programs offers a variety of support services to help get through financial difficulty
             for people of all backgrounds, races, income and ages. Anyone who is having difficulty paying for rent or
@@ -142,7 +144,9 @@ class ResidentsPage extends React.Component {
             }}
           />
 
-          <SectionTitle>Resident Resources</SectionTitle>
+          <SectionTitle>
+            <a name="resident-resources">Resident Resources</a>
+          </SectionTitle>
           <TenantResourceTable />
         </Container>
       </Layout>

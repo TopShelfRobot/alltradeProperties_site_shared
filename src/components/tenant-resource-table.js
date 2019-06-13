@@ -53,6 +53,13 @@ const tenantResources = [
     description:
       "It is certainly Alltrade's goal to provide quality customer service and equitable service to all of our customers. However, if you would like to file a formal grievance, please click the link to learn how you can file do so.",
   },
+
+  {
+    title: 'Second Chance Leasing Participant Packet',
+    file: 'tenantResources/Second Chance Leasing Participant Guidelines with Cover.pdf',
+    description:
+      'Interested in learning more about our exciting eviction prevention initiative at Alltrade? This packet provides all the information you need to know about becoming a Second Chance Leasing Program participant.',
+  },
 ]
 
 const TenantResourceRow = ({ resource, style = {}, ...props }) => {

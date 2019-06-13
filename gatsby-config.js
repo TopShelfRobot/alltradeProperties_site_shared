@@ -39,6 +39,8 @@ module.exports = {
           url: '/residents',
           sub: [
             {label: "Resident Selection Guidelines", url: "/resident-selection"},
+            {label: "Eviction Resources", url: "/residents#eviction-resources"},
+            {label: "Resident Resources", url: "/residents#resident-resources"},
           ]
       },
         { label: 'Owners', url: '/owners'},
