@@ -22,6 +22,7 @@ module.exports = {
           label: "Listings",
           url: '/listing',
           sub: [
+            {label: "All Listings", url: "/listing"},
             {label: "Old Louisville", url: "/officePages/old_louisville"},
             {label: "South End", url: "/officePages/south_end/"},
             {label: "Lexington Region", url: "/officePages/lexington/"},
