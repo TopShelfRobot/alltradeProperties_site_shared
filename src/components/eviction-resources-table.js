@@ -32,7 +32,7 @@ class EvictionResourcesTable extends React.Component {
         ))}
 
         <div className="eviction-resource-items card">
-          {filteredResources.sort(byOrderProp).map((resource, idx) => (
+          {filteredResources.map((resource, idx) => (
             <div
               className="border-bottom"
               key={`resource-${idx}`}
