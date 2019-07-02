@@ -56,7 +56,7 @@ const tenantResources = [
 
   {
     title: 'Second Chance Leasing Participant Packet',
-    file: 'tenantResources/Second Chance Leasing Participant Guidelines with Cover.pdf',
+    file: 'tenantResources/Second Chance Leasing Participant Guidelines with Cover-2.pdf',
     description:
       'Interested in learning more about our exciting eviction prevention initiative at Alltrade? This packet provides all the information you need to know about becoming a Second Chance Leasing Program participant.',
   },
