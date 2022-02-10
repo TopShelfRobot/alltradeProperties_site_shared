@@ -36,7 +36,7 @@
     "gatsby-transformer-sharp": "^2.1.9",
     "i": "^0.3.6",
     "jquery": "^3.3.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "nodemailer-mailgun-transport": "^1.4.0",
     "npm": "^6.4.1",
     "rc-slider": "^8.6.3",
